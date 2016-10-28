@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/sweetalert2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="../static/sweetalert2/dist/sweetalert2.min.css">
+</head>
+<body>
+    <script>
+        swal({
+            title: 'Confirm Credentials',
+            text: "You won't be able to revert this!",
+            type: 'warning',
+            html: '<b>Name</b> : {{ lst[0] }}'+'{{ lst[1] }}'+
+                    '<br><b>USN</b> : {{ lst[2] }}'+'<br><b>Email</b> : {{ lst[3] }}'+
+                    '<br><b>Phone</b> : {{ lst[4] }}'+'<br><b>Year</b> : {{ lst[5] }}'+
+                    '<br><b>Branch</b> : {{ lst[6] }}',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Submit'
+            }).then(function() {
+                swal(
+                    'You',
+                    'have Successfully registered!',
+                    'success'
+            );
+        })
+    </script>
+</body>
+</html>

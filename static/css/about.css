@@ -1,0 +1,84 @@
+/* This section is used for styling body */
+body {
+	margin-bottom :0px;
+	margin-left :0px;
+	margin-right :0px;
+	margin-top :0px;
+}
+#abtback1{
+	background-size:cover;
+    background-position:center;
+	background-color:#18bc9c;
+}	
+.aboutpage {
+	background-color:#263238;
+	text-align: center;
+	color: white;
+}
+.navibar {
+	width:100%;
+	text-align:center;
+    background-color: #333333;
+    color:#00cc33;
+}
+.navbar-fixed-top {
+        padding: 25px 0;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
+    }
+.item{
+	display: inline-block;
+	padding: 15px;
+}
+.item:hover{
+	background-color: black;
+}
+a.link{
+    text-decoration: none;
+    color:#00cc33;
+    font:17px/30px Georgia, serif; 
+}
+a {text-decoration: none;}
+    a:hover {	padding:5px;
+		text-decoration: out animsition-link;}
+
+#head1	{
+	padding: 15px;
+	font-size : 50px;
+	color:white;
+	margin:0;
+}
+.paragraph{
+	margin-top: 30px;
+	margin-left: 30px;
+	margin-right:30px;
+	margin-bottom:15px;
+	text-align: center;
+	font-family: Comic Sans MS;
+	font-size:25px;
+}
+.links{
+	color: blue;
+}
+.links:visited{
+	color: Purple;	
+}
+.links:hover{
+	color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+#head2{
+	padding: 15px;
+	font-size : 40px;
+	color:white;
+	margin:0;
+}
+#next{
+	margin-left: 1100px;
+	font-family: Sans MS;
+	text-decoration: underline;
+	font-size: 20px;
+}
