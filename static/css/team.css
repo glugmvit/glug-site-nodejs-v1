@@ -1,0 +1,59 @@
+.navbar-fixed-top {
+        padding: 25px 0;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
+    }
+#navibar {
+	width:100%;
+	text-align:center;
+    background-color: #333333;
+    color:#00cc33;
+}
+.item{
+	display: inline-block;
+	padding: 15px;
+}
+.item:hover{
+	background-color: black;
+}
+a.link{
+    text-decoration: none;
+    color:#00cc33;
+    font:15px/30px Georgia, serif; 
+}
+a:hover{
+    color:#00B4FF;
+}
+#head1	{
+	padding: 15px;
+	font-size : 50px;
+	color:white;
+	margin:0;
+}
+#teampage {
+	background-color:#263238;
+	text-align: center;
+	color: white;
+}
+.MemberDetails
+{
+    height: 300px;
+    width: 400px;
+    padding: 5px;
+}
+.png {
+	padding: 10px 20px;
+	align: center;
+}
+.img-circle{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+.MemberDetails{
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+}
+

@@ -1,2 +1,2 @@
-# GLUG_SMVIT_SITE
-GLUG MVIT official Website .
+# GLUG_MVIT_WEBSITE
+A website for GLUG MVIT.
