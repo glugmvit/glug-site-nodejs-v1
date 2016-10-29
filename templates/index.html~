@@ -26,7 +26,7 @@
             <div class="item"><a class="link" href="journey.html">Journey</a></div>
             <div class="item"><a class="link" href="#">Activities</a></div>
             <div class="item"><a class="link" href="#">Upcoming Event</a></div>
-            <div class="item"><a class="link" href="team.html">The Team</a></div>
+            <div class="item"><a class="link" href="team/team.html">The Team</a></div>
             <div class="item"><a class="link" href="registration.html">Register</a></div>
         </div>
         <br>
