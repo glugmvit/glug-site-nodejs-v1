@@ -7,6 +7,79 @@
 	margin-left: 0px;
 	margin-right: 0px;
 } 
+/*-------------------------------------------------
+BANNER CLASSES
+-------------------------------------------------*/
+.banner-wrapper{border:2px solid #e5e5e5;background:url(banner-bg.jpg) repeat-x #ffffff; margin-top:0.002%; margin-left:5%; margin-right:5%; overflow:hidden;}
+.banner{float:left; margin-left:9px; margin-top:9px; margin-bottom:9px;}
+.banner-content{width:260px; float:right; margin-top:130px; margin-right:6px;}
+.banner-content h1{font-family:font-family: 'Tienne', serif; font-size:30px; color:#e5703d; text-transform:uppercase; font-weight:normal;}
+.banner-content h2{color:#bbbbbb; font-family: 'Lato', sans-serif; font-size:22px; font-weight:normal; text-transform:none;}
+.banner-content p{color:#bbbbbb; font-size:12px; padding-top:20px;}
+.banner-content a{background:#333333; display:block; width:180px; height:40px; line-height:40px; margin-top:20px; color:#ffffff; font-family:font-family: 'Tienne', serif; font-size:15px; text-align:center; text-decoration:none; text-transform:uppercase; font-weight:normal;}
+.banner-content a:hover{background:#e5703d; display:block; width:180px; height:40px; line-height:40px; margin-top:20px; color:#ffffff; font-family:font-family: 'Tienne', serif; font-size:15px; text-align:center;}
+
+/*-------------------------------------------------
+GENERAL CLASSES
+-------------------------------------------------*/
+
+.panel {overflow:hidden;}
+.title {}
+.content { overflow:hidden; font-size:13px;};
+.contento { overflow:hidden; font-size:13px; height: 80px}
+.button-link{}
+.button-link a{text-decoration:none; color:#ffffff; font-family: 'Tienne', serif; font-size:11px; background:#FF6600; width:90px; height:24px; line-height:24px; text-align:center; text-transform:uppercase; display:block; font-weight:normal;}
+.button-link a:hover{text-decoration:none; background:#333333;}
+
+/*-------------------------------------------------
+3 PANELS CLASSS
+-------------------------------------------------*/
+.panel-wrapper { width:80%; margin:0 auto; overflow:hidden; margin-top:10px; border-bottom:1px solid #e2e2e2;}
+.panel-wrapper .panel{float:left; width:300px; margin-bottom:10px;}
+.panel-wrapper .title{padding-bottom:2px;}
+.panel-wrapper .content p{line-height:18px;}
+.panel-wrapper .button-link{ padding-top:26px;}
+.panel-wrapper .content ul li{display:block; border-bottom:1px solid #e2e2e2; height:40px; line-height:40px;}
+.panel-wrapper .bdrBottom{border-bottom:solid;}
+.panel-wrapper .content ul li a{color:#000000; font-size:13px; text-decoration:none;}
+.panel-wrapper .content ul li a:hover{color:#e5703d;}
+.panel-wrapper .content ul li.borderNone { border-bottom:none;}
+.panel-wrapper .content img{width:200px; height:180px;}
+.panel-wrapper .contentbox{width:200px; height:40px; background:#e2e2e2;}
+.panel-wrapper .contentbox h1{font-size:13px; font-weight:normal; color:#333333; text-align:center; line-height:50px;}
+/*-------------------------------------------------
+CSS TWEAKS
+-------------------------------------------------*/
+.clearing { clear:both;}
+.fltLeft { float:left;}
+.flrRight { float:right;}
+.marLeft30 { margin-left:30px;}
+.marRight30 { margin-right:80px;}
+.marRight20 { margin-right:30px;}
+.marginTop { margin-top:30px;}
+.marginBottom { margin-bottom:60px;}
+.padTop { padding-top:20px;}
+.padBottom { padding-bottom:20px;}
+.wid960{ width:960px !important; }
+
+/*-------------------------------------------------
+MIDDLE 2 PANELS CLASSS
+-------------------------------------------------*/
+.panel-wrapper .midpanelleft{width:270px; height:270px; float:left; margin-bottom:44px;}
+.panel-wrapper .midpanelright{width:660px; float:left;margin-top:22px;}
+.panel-wrapper .midpanelright .panel{width:200px; float:left;}
+
+/*-------------------------------------------------
+LAYOUT CLASSS
+-------------------------------------------------*/
+.page-wrapper { width:1000px; margin:0 auto; overflow:hidden; margin-top:50px; padding-bottom:60px;}
+.primary-content { float:left; margin-left:01px; width:480px; overflow:hidden; border-right:1px solid #e2e2e2;}
+.sidebar { float:left;margin-left:60px; width:450px; overflow:hidden;}
+
+
+/*-------------------------------------------------
+GENERAL CLASSES
+-------------------------------------------------*/
 #navibar {
 	width:100%;
 	text-align:center;
@@ -109,3 +182,5 @@ body {font-family: Verdana,sans-serif;}
 }
 /* Slideshow poster end*/
 /*------------------------------------------------------------------------------------*/
+
+
