@@ -51,6 +51,21 @@ a:hover{
     height: 200px;
     width: 200px;
 }
+.img-circle{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    /* Disable GrayScale Effect */
+      filter: none;
+    -webkit-filter: grayscale(0);
+
+}
+/* Enable grayscale on hover */
+.img-circle:hover{
+    filter: gray; /* IE6-9 */
+    filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
 .MemberDetails{
     margin: 10px;
     display: inline-block;
