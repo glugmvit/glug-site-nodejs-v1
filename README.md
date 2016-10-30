@@ -1,2 +1,3 @@
-# GLUG_MVIT_WEBSITE
+# GLUG MVIT WEBSITE
+----------
 A website for GLUG MVIT.
