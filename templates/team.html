@@ -5,14 +5,20 @@
         <link href="../static/css/team.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-		<div id="navibar" class="navibar-fixed-top">  
+	<div id="navibar" class="navibar-fixed-top">  
 		    <div class="item"><a class="link" href="/">Home</a></div>
-            <div class="item"><a class="link" href="about.html">About</a></div>
-            <div class="item"><a class="link" href="journey.html">Journey</a></div>
+            <div class="item"><a class="link" href="/about">About</a></div>
+            <div class="item"><a class="link" href="/journey">Journey</a></div>
             <div class="item"><a class="link" href="#">Activities</a></div>
             <div class="item"><a class="link" href="#">Upcoming Event</a></div>
-            <div class="item"><a class="link" href="team.html">The Team</a></div>
+            <div class="item"><a class="link" href="/team">The Team</a></div>
             <div class="item"><a class="link" href="/registration">Register</a></div>
+            {% if name %}
+                <div class="item"><a class="link" href="/signout">Sign Out</a></div>
+            {% else %}
+                <div class="item"><a class="link" href="/login">Login</a></div>
+                <div class="item"><a class="link" href="/signup">Signup</a></div>
+            {% endif %}
         </div>
 		<div id="teampage">
 			<h1 id="head1">Team @GLUG MVIT</h1>
