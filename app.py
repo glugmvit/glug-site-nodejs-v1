@@ -52,7 +52,9 @@ def journey():
 def signout():
     session.clear()
     return redirect(url_for('login'))
-
+@app.route('/contact')
+def contact():
+    return render_template("contact-us.html")
 @app.route('/registration', methods=['GET', 'POST'])
 def send():
     db = connection.glug.registration

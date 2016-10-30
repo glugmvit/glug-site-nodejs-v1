@@ -1,24 +1,31 @@
-<html lang="en" >
-    <head>
-        <meta charset="utf-8" />    
-		<title>Contact US</title>
-        <link type="text/css" rel="stylesheet" href="../static/css/contact-us.css">
-    </head>
-    
-    <body id="ConBack">
-        <div id="navibar" class="navibar-fixed-top">  
-		    <div class="item"><a class="link" href="/">Home</a></div>
-            <div class="item"><a class="link" href="about.html">About</a></div>
-            <div class="item"><a class="link" href="journey.html">Journey</a></div>
-            <div class="item"><a class="link" href="#">Activities</a></div>
-            <div class="item"><a class="link" href="#">Upcoming Event</a></div>
-            <div class="item"><a class="link" href="team.html">The Team</a></div>
-            <div class="item"><a class="link" href="/registration">Register</a></div>
-        </div>
-        <div id="contactpage">
-			<h1 id="head">Contact @GLUG MVIT</h1>
-        </div>
-        <div id="info-contact">
-            <p>glugmvit@gmail.com<br><br>XYZ : *************<br><br>XYZ: 13331********</p>
-        </div>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Contact US</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/contact-us.css">
+</head>
+
+<body id="ConBack">
+<div id="navibar">
+    <div class="item"><a class="link" href="/">Home</a></div>
+    <div class="item"><a class="link" href="/about">About</a></div>
+    <div class="item"><a class="link" href="/journey">Journey</a></div>
+    <div class="item"><a class="link" href="#">Activities</a></div>
+    <div class="item"><a class="link" href="#">Upcoming Event</a></div>
+    <div class="item"><a class="link" href="/team">The Team</a></div>
+    <div class="item"><a class="link" href="/contact">Contact Us</a> </div>
+    <div class="item"><a class="link" href="/registration">Register</a></div>
+    {% if name %}
+    <div class="item"><a class="link" href="/signout">Sign Out</a></div>
+    {% else %}
+    <div class="item"><a class="link" href="/login">Login</a></div>
+    <div class="item"><a class="link" href="/signup">Signup</a></div>
+    {% endif %}
+</div>
+<div id="contactpage">
+    <h1 id="head">Contact @GLUG MVIT</h1>
+</div>
+<div id="info-contact">
+    <p>glugmvit@gmail.com<br><br>XYZ : *************<br><br>XYZ: 13331********</p>
+</div>
+</body>
