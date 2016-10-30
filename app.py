@@ -1,6 +1,8 @@
 from flask import Flask, request, render_template, sessions, redirect
-
+from pymongo import MongoClient
 app = Flask(__name__)
+
+connection = MongoClient("< your mongodb url >")
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -33,6 +35,7 @@ def journey():
 
 @app.route('/registration', methods=['GET', 'POST'])
 def send():
+    db = connection.glug.registration
     if request.method == 'POST':
         fname = request.form['fname']
         lname = request.form['lname']
@@ -43,16 +46,18 @@ def send():
         branch = request.form['branch']
 
         x = [fname, lname, usn, email, number, year, branch]
-        # user = {
-        #     'fname': fname,
-        #     'lname': lname,
-        #     'usn': usn,
-        #     'email': email,
-        #     'number': number,
-        #     'year': year,
-        #     'branch': branch
-        # }
-
+        user = {
+            'fname': fname,
+            'lname': lname,
+            'usn': usn,
+            'email': email,
+            'number': number,
+            'year': year,
+            'branch': branch
+        }
+        db.insert(user)
+        connection.close()
+        print('inserted the registration into database.')
         # comented this render_templete sice there was a difficulty in comming back from the confirm.html to index.html
         # return render_template("confirm.html", lst= x)
     elif request.method == 'GET':
