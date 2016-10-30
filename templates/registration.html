@@ -1,52 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" >
-    <head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>GLUG MVIT-Registration</title>
-    	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
-    </head>
-    <body background="../static/images/back2.jpg" class="bg">
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GLUG MVIT-Registration</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-		<form method="POST" action="/registration">
-        <center>
-            <fieldset style="width:300px">
-                <legend>Your basic info</legend>
-                <input type="text" size="11" name="fname" maxlength="20" placeholder="First name">&nbsp;
-                <input type="text" size="11" name="lname" maxlength="20" placeholder="Last name"><br><br>
-                <input type="text" size="24" name="number" maxlength="10" placeholder="Phone Number">
-                <br><br>
-                <input type="email" size="24" name="email" placeholder="E-mail">
-            </fieldset>
+</head>
+<body background="../static/images/back2.jpg" class="bg">
+
+<form method="POST" action="/registration">
+    <center>
+        <fieldset style="width:300px">
+            <legend>Your basic info</legend>
+            <input type="text" size="11" name="fname" maxlength="20" placeholder="First name">&nbsp;
+            <input type="text" size="11" name="lname" maxlength="20" placeholder="Last name"><br><br>
+            <input type="text" size="24" name="number" maxlength="10" placeholder="Phone Number">
             <br><br>
+            <input type="email" size="24" name="email" placeholder="E-mail">
+        </fieldset>
+        <br><br>
 
-            <fieldset style="width:300px">
-                <legend>College Info</legend>
-                <input size="15" type="text" name="usn" maxlength="10" placeholder="USN"><br><br>
-                <select name="year">
-                    <option selected disabled>Year</option>
-                    <option>I</option>
-                    <option>II</option>
-                    <option>III</option>
-                    <option>IV</option>
-                </select>&nbsp;&nbsp;&nbsp;
-                <select name="branch">
-                    <option selected disabled>Branch</option>
-                    <option>CSE</option>
-                    <option>ISE</option>
-                    <option>ECE</option>
-                    <option>TCE</option>
-                    <option>ME</option>
-                    <option>other</option>
-                </select>
-            </fieldset>
-            <br>
-            <input class="btn btn-danger btn-md" type="reset" name="reset">&nbsp;&nbsp;
-            <input class="btn btn-primary btn-md" type="submit" value="Submit">
-        </center>
-		</form>s
-            
+        <fieldset style="width:300px">
+            <legend>College Info</legend>
+            <input size="15" type="text" name="usn" maxlength="10" placeholder="USN"><br><br>
+            <select name="year">
+                <option selected disabled>Year</option>
+                <option>I</option>
+                <option>II</option>
+                <option>III</option>
+                <option>IV</option>
+            </select>&nbsp;&nbsp;&nbsp;
+            <select name="branch">
+                <option selected disabled>Branch</option>
+                <option>CSE</option>
+                <option>ISE</option>
+                <option>ECE</option>
+                <option>TCE</option>
+                <option>ME</option>
+                <option>other</option>
+            </select>
+        </fieldset>
+        <br>
+        <input class="btn btn-danger btn-md" type="reset" name="reset">&nbsp;&nbsp;
+        <input class="btn btn-primary btn-md" type="submit" value="Submit">
+    </center>
+</form>
+s
+
 </html>
 		

@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -20,6 +24,7 @@
         font-size: 25px;
         font-weight: bold;
     }
+
     .signup-btn {
         background: #79bc64;
         background-image: -webkit-linear-gradient(top, #79bc64, #578843);
@@ -83,20 +88,21 @@
             <li><a class="link" href="#">Activities</a></li>
             <li><a class="link" href="#">Upcoming Event</a></li>
             <li><a class="link" href="/team">The Team</a></li>
+            <li class="item"><a class="link" href="/contact">Contact Us</a> </li>
             <li><a class="link" href="/registration">Register</a></li>
             <li><a class="link" href="/login">login</a></li>
         </ul>
     </div>
 </div>
-    {% if msg %}
-        <div class="alert alert-warning">
-          <strong>Warning!</strong> {{ msg }}
-        </div>
-    {% endif %}
-    {% if name %}
-        Already logged in as {{name}}
-    {% else %}
-    <div class="container">
+{% if msg %}
+<div class="alert alert-warning">
+    <strong>Warning!</strong> {{ msg }}
+</div>
+{% endif %}
+{% if name %}
+Already logged in as {{name}}
+{% else %}
+<div class="container">
     <div class="row">
         <h3 class="col-sm-offset-3 col-sm-6">Signup</h3>
     </div>
@@ -117,17 +123,18 @@
                 <input type='tel' name="number" class="form-control input-lg" placeholder="Your PhoneNumber"/>
                 <input type="text" name="username" value="" class="form-control input-lg" placeholder="Your username"/>
                 <input type="password" name="password" value="" class="form-control input-lg"
-                    placeholder="Password"/><input type="password" name="confirm_password" value=""
-                                                   class="form-control input-lg" placeholder="Confirm Password"/>
+                       placeholder="Password"/><input type="password" name="confirm_password" value=""
+                                                      class="form-control input-lg" placeholder="Confirm Password"/>
                 <label>USN</label>
-                <input type="text" name="usn" maxlength="10" value="" class="form-control input-lg" placeholder="Your USN"/>
+                <input type="text" name="usn" maxlength="10" value="" class="form-control input-lg"
+                       placeholder="Your USN"/>
                 <br/>
                 <span class="help-block">By clicking Create my account, you agree to be a part of GLUG MVIT and contribute the open and free software.</span>
                 <button class="btn btn-primary btn-block" type="submit">Create my account</button>
             </form>
         </div>
     </div>
-    </div>
-    {% endif %}
+</div>
+{% endif %}
 </body>
 </html>
