@@ -43,14 +43,13 @@ a:hover{
 }
 #info-contact{
     text-align: center;
-    font-size: 35px;
-    font-family: Comic Sans MS;
+    font-size: 32px;
+    font-family: 'Lobster';
 }
 #EmailInfo{
-    margin: 15px;
-    padding: 5px;
+    margin: 8px;
 }
-#WsappImg{
-    height: 80px;
-    width: 80px;
+.ContactImg{
+    height: 90px;
+    width: 90px;
 }
