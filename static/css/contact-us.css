@@ -1,5 +1,7 @@
 #ConBack{
-    
+    background-image: url("../images/Conbck1.jpg");   
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .navbar-fixed-top {
         padding: 25px 0;
@@ -41,5 +43,14 @@ a:hover{
 }
 #info-contact{
     text-align: center;
-    font-size: 70px;
+    font-size: 35px;
+    font-family: Comic Sans MS;
+}
+#EmailInfo{
+    margin: 15px;
+    padding: 5px;
+}
+#WsappImg{
+    height: 80px;
+    width: 80px;
 }
