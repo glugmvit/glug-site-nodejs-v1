@@ -1,21 +1,17 @@
-body{
-    top:0;
-	background-image:url(../images/back2.jpg);
-	background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-
+/* Navibar CSS */
+.navbar-fixed-top {
+        padding: 25px 0;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
+    }
 #navibar {
+	width:100%;
 	text-align:center;
     background-color: #333333;
     color:#00cc33;
 }
-
-
-
 .item{
-	
 	display: inline-block;
 	padding: 15px;
 }
@@ -25,19 +21,24 @@ body{
 a.link{
     text-decoration: none;
     color:#00cc33;
-	padding:10px;
-   font:15px Century Gothic;
-   font-weight:bold;
-   
+    font:15px/30px Georgia, serif; 
 }
 a:hover{
     color:#00B4FF;
 }
+/* Rest page */
+body{
+    top:0;
+	background-image:url(../images/back2.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 #head1	{
 	padding: 15px;
-	font: 50px Tahoma;
+	font: 50px;
 	color:white;
 	margin:0;
+    font-family: 'PT Sans Narrow';
 }
 #teampage {
 	margin-bottom:5px;
@@ -50,7 +51,10 @@ a:hover{
 	height: 300px;
     width: 400px;
     padding:20px;
-    margin-top: 29PX;
+    margin-top: 29px;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Shrikhand';
 }
 .png {
 	padding: 5px 15px;
@@ -71,10 +75,6 @@ a:hover{
     filter: gray; /* IE6-9 */
     filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
     -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
-}
-.MemberDetails{
-    display: inline-block;
-    text-align: center;
 }
 
 #foot{
