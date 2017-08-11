@@ -1,0 +1,27 @@
+<div>
+    {{#if msg}}
+    <div class="alert alert-danger">
+        <strong>Warning!</strong> {{msg}}
+    </div>
+    {{/if}}
+    {{#if name}}
+    Already logged in as {{name}}
+    {{else}}
+    <div class="container" style="margin:0;width:30%;margin:auto">
+    <h3>Login</h3>
+    <form id="signin" method="POST" action="/login">
+        <div class="form">
+            <i class="fa fa-user prefix"></i>
+            <input type="text" id="form3" name="username" placeholder="Userame" required>
+        </div>
+        <div class="form">
+            <i class="fa fa-lock prefix"></i>
+            <input type="password" id="form4" name="password" placeholder="Password" required>
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    </div>
+    {{/if}}
+
+</div>

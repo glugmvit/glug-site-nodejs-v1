@@ -1,0 +1,27 @@
+{
+  "name": "GLUG-WEBSITE",
+  "version": "1.0.0",
+  "description": "A Website for GLUG MVIT",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "GLUG-MVIT",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cookie-parser": "^1.4.1",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-session": "*",
+    "handlebars": "^4.0.6",
+    "mongoose": "^4.11.0",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  }
+}
