@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="logo-sq.png">
+    <title>GLUG MVIT</title>
+    <link href="css/all.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/jscript.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/team.css" rel="stylesheet" type="text/css" />
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Aguafina+Script" /> -->
+</head>
+<body class="bg">
+<div id="navibar">
+    <div class="item"><a class="link" href="/">Home</a></div>
+    <div class="item"><a class="link" href="/about">About</a></div>
+    <div class="item"><a class="link" href="/journey">Journey</a></div>
+    <div class="item"><a class="link" href="/activities">Activities</a></div>
+    <div class="item"><a class="link" href="/upcoming">Upcoming Event</a></div>
+    <div class="item"><a class="link" href="/team">The Team</a></div>
+    <div class="item"><a class="link" href="/contact">Contact Us</a> </div>
+    {{#if name}}
+    <div class="item"><a class="link" href="/signout">Sign Out</a></div>
+    {{else}}
+    <div class="item"><a class="link" href="/login">Login</a></div>
+    <div class="item"><a class="link" href="/signup">Signup</a></div>
+    {{/if}}
+</div>
+{{{body}}}
+</body>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+</html>

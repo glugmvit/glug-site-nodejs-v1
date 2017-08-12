@@ -6,7 +6,8 @@ body {
 	margin-top :0px;
 }
 #abtback1{
-	background-size:cover;
+	background-image: url('images/aboutback.jpg');
+	background-size:cover; 
     background-position:center;
 	background-color:#18bc9c;
 }	

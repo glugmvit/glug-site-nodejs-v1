@@ -1,23 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
-
-</head>
-<body>
 <style media="screen" type="text/css">
     legend {
         color: #141823;
@@ -79,29 +59,14 @@
         }
     }
 </style>
-<div id="navbar navbar-default">
-    <div class="container-fluid">
-        <ul class="nav navbar-nav">
-            <li class="active"><a class="link" href="/">Home</a></li>
-            <li><a class="link" href="/about">About</a></li>
-            <li><a class="link" href="/journey">Journey</a></li>
-            <li><a class="link" href="#">Activities</a></li>
-            <li><a class="link" href="#">Upcoming Event</a></li>
-            <li><a class="link" href="/team">The Team</a></li>
-            <li class="item"><a class="link" href="/contact">Contact Us</a> </li>
-            <li><a class="link" href="/registration">Register</a></li>
-            <li><a class="link" href="/login">login</a></li>
-        </ul>
-    </div>
-</div>
-{% if msg %}
+{{#if msg}}
 <div class="alert alert-warning">
     <strong>Warning!</strong> {{ msg }}
 </div>
-{% endif %}
-{% if name %}
+{{/if}}
+{{#if name}}
 Already logged in as {{name}}
-{% else %}
+{{else}}
 <div class="container">
     <div class="row">
         <h3 class="col-sm-offset-3 col-sm-6">Signup</h3>
@@ -135,6 +100,4 @@ Already logged in as {{name}}
         </div>
     </div>
 </div>
-{% endif %}
-</body>
-</html>
+{{/if}}
