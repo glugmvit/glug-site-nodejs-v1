@@ -6,12 +6,4 @@ router.get('/', function(req, res){
     res.render('about');
 });
 
-function ensureAuthenticated(req, res, next){
-    if(req.isAuthenticated()){
-        return next();
-    } else {
-        res.redirect('/login');
-    }
-}
-
 module.exports = router;
