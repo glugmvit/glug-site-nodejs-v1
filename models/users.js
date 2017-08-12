@@ -3,20 +3,34 @@ var bcrypt = require('bcryptjs');
 
 // User Schema
 var UserSchema = mongoose.Schema({
-	fname: String,
-    lname: String,
-    usn: String,
-    email: String,
-    number: Number,
-    year: String,
-    branch: String,
-    username:String,
-    password:String
+	username: {
+		type: String,
+		index:true
+	},
+	password: {
+		type: String
+	},
+	email: {
+		type: String
+	},
+	fname: {
+		type: String
+	},
+	lname: {
+		type: String
+	},
+	usn: {
+		type: String
+	},
+	number: {
+		type: Number
+	}
 });
 
 var User = module.exports = mongoose.model('User', UserSchema);
 
 module.exports.createUser = function(newUser, callback){
+	console.log('New User created.');
 	bcrypt.genSalt(10, function(err, salt) {
 	    bcrypt.hash(newUser.password, salt, function(err, hash) {
 	        newUser.password = hash;
@@ -25,13 +39,18 @@ module.exports.createUser = function(newUser, callback){
 	});
 }
 
+module.exports.checkExistingUser = function(val1, val2, val3, callback) {
+	var query1 = {username: val1};
+	var query2 = {usn: val2};
+	var query3 = {email: val3};
+
+	User.findOne({$or: [query1,query2,query3]},callback);
+
+}
+
 module.exports.getUserByUsername = function(username, callback){
 	var query = {username: username};
 	User.findOne(query, callback);
-}
-
-module.exports.getUserById = function(id, callback){
-	User.findById(id, callback);
 }
 
 module.exports.comparePassword = function(candidatePassword, hash, callback){

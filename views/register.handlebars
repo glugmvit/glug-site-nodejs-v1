@@ -59,37 +59,34 @@
         }
     }
 </style>
-{{#if msg}}
-<div class="alert alert-warning">
-    <strong>Warning!</strong> {{ msg }}
-</div>
-{{/if}}
-{{#if name}}
-Already logged in as {{name}}
-{{else}}
+
 <div class="container">
     <div class="row">
-        <h3 class="col-sm-offset-3 col-sm-6">Signup</h3>
+        <h2 class="page-header">Register</h2>
     </div>
+    {{#if errors}}
+      {{#each errors}}
+        <div class="alert {{type}}">{{msg}}</div>
+      {{/each}}
+    {{/if}}
     <div class="row">
         <div class="col-sm-offset-1 col-sm-2">
         </div>
         <div class="col-sm-6">
-            <form method="POST" action="/signup">
+            <form method="POST" action="/users/register">
                 <div class="row">
                     <div class="col-xs-6 col-md-6">
-                        <input type="text" name="firstname" value="" class="form-control input-lg"
+                        <input type="text" name="fname" class="form-control input-lg"
                                placeholder="First Name"/></div>
                     <div class="col-xs-6 col-md-6">
-                        <input type="text" name="lastname" value="" class="form-control input-lg"
+                        <input type="text" name="lname" class="form-control input-lg"
                                placeholder="Last Name"/></div>
                 </div>
-                <input type="text" name="email" value="" class="form-control input-lg" placeholder="Your Email"/>
+                <input type="email" name="email" class="form-control input-lg" placeholder="Your Email"/>
                 <input type='tel' name="number" class="form-control input-lg" placeholder="Your PhoneNumber"/>
-                <input type="text" name="username" value="" class="form-control input-lg" placeholder="Your username"/>
-                <input type="password" name="password" value="" class="form-control input-lg"
-                       placeholder="Password"/><input type="password" name="confirm_password" value=""
-                                                      class="form-control input-lg" placeholder="Confirm Password"/>
+                <input type="text" name="username" class="form-control input-lg" placeholder="Your username"/>
+                <input type="password" name="password" class="form-control input-lg" placeholder="Password"/>
+                <input type="password" name="password2" class="form-control input-lg" placeholder="Confirm Password"/>
                 <label>USN</label>
                 <input type="text" name="usn" maxlength="10" value="" class="form-control input-lg"
                        placeholder="Your USN"/>
@@ -100,4 +97,3 @@ Already logged in as {{name}}
         </div>
     </div>
 </div>
-{{/if}}
