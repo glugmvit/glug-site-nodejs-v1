@@ -9,14 +9,9 @@
 
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:bold' rel='stylesheet' type='text/css'>
 <br>
-{{#if msg}}
-<div class="alert alert-success">
-    <strong>Success!</strong> logged in as {{msg}}
-</div>
-{{/if}}
 <p>
-    {{#if name}}
-    Welcome {{name}}...
+    {{#if user}}
+    Welcome {{user.fname}}...
     {{/if}}
 </p>
 <div class="banner-wrapper">

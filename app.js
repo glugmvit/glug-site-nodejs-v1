@@ -1,15 +1,12 @@
 var express = require('express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
+var flash = require('connect-flash');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
 var session = require('express-session');
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
 var mongoose = require('mongoose');
-var handlebars = require('handlebars');
 
-mongoose.connect('mongodb://127.0.0.1:27017/glugmvit');
+mongoose.connect('mongodb://client:client@ds139267.mlab.com:39267/glug');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
@@ -22,8 +19,8 @@ var about = require('./routes/about');
 var contact = require('./routes/contact-us');
 var journey = require('./routes/journey');
 var team = require('./routes/team');
-var login = require('./routes/login');
-var signup = require('./routes/signup');
+var users = require('./routes/users');
+var dashboard = require('./routes/dashboard');
 var upcoming = require('./routes/upcoming');
 var activities = require('./routes/activities');
 
@@ -45,7 +42,6 @@ app.set('view engine', 'handlebars');
 // BodyParser Middleware
 app.use(bodyParser.json()); // to support JSON bodies
 app.use(bodyParser.urlencoded({ extended: true })); // to support URL-encoded bodies
-app.use(cookieParser());
 
 // Set Static Folder
 app.use(express.static(__dirname + '/public'));
@@ -57,10 +53,17 @@ app.use(session({
     resave: true
 }));
 
-// Passport init
-app.use(passport.initialize());
-app.use(passport.session());
+//connect FLash
+app.use(flash());
 
+// Global Vars
+app.use(function (req, res, next) {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
+  res.locals.user = req.user || null;
+  next();
+});
 
 // Use the variable for the new page here
 app.use('/', home);
@@ -68,8 +71,8 @@ app.use('/about', about);
 app.use('/contact', contact);
 app.use('/journey', journey);
 app.use('/team', team);
-app.use('/login', login);
-app.use('/signup', signup);
+app.use('/users',users);
+app.use('/dashboard', dashboard);
 app.use('/upcoming', upcoming);
 app.use('/activities', activities);
 
