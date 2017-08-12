@@ -1,9 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-// Get Teampage
+// Get activities
 router.get('/', function(req, res){
-    res.render('activities');
+    if(req.session.user)
+		res.render('activities', {user: req.session.user});
+	else
+		res.render('activities');
 });
 
 module.exports = router;

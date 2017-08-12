@@ -1,17 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-// Get Homepage
+// Get contact-us
 router.get('/', function(req, res){
-    res.render('contact-us');
+    if(req.session.user)
+		res.render('contact-us', {user: req.session.user});
+	else
+		res.render('contact-us');
 });
-
-function ensureAuthenticated(req, res, next){
-    if(req.isAuthenticated()){
-        return next();
-    } else {
-        res.redirect('/login');
-    }
-}
 
 module.exports = router;
