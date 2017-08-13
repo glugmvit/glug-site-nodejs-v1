@@ -33,7 +33,7 @@ router.post('/',function(req, res) {
                 } else {
 
                     // if password doesn't match, flash message for invalid password.
-                    req.flash('error', 'Invalid Username and Password');
+                    req.flash('error', 'Invalid Password');
                     res.redirect('/login');
                 }
             });
