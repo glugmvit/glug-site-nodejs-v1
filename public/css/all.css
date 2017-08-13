@@ -1,5 +1,5 @@
-.bg { 
-   
+.bg {
+
    background-image:url('../images/back2.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -7,13 +7,13 @@
 	margin-bottom: 0px;
 	margin-left: 0px;
 	margin-right: 0px;
-} 
+}
 /*-------------------------------------------------
 BANNER CLASSES
 -------------------------------------------------*/
 .banner-wrapper{border:2px solid #e5e5e5;background:none; repeat-x #ffffff; margin-top:0.002%;margin-left:5%; margin-right:0%; overflow:hidden;}
 .banner-wrapper img {
-        
+
 	width:100%;
 	height:500px;
 border-radius:5px;
@@ -124,13 +124,13 @@ GENERAL CLASSES
 a.link{
     text-decoration: none;
     color:#00cc33;
-    font:15px/30px Georgia, serif; 
+    font:15px/30px Georgia, serif;
 }
 a:hover{
     color:#00B4FF;
 }
 #footer {
-    
+
     clear: both;
     position: relative;
     z-index: 10;
@@ -140,7 +140,7 @@ a:hover{
     text-align:center;
     padding: 5px;
     border:2px solid black;
-	
+
 }
 
 
@@ -247,5 +247,3 @@ body {font-family: Verdana,sans-serif;}
 }
 /* Slideshow poster end*/
 /*------------------------------------------------------------------------------------*/
-
-
