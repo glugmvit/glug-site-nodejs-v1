@@ -1,3 +1,4 @@
+
 <div class="container" style="margin:0;width:30%;margin:auto">
     <h2 class="page-header">Account Login</h2>
     {{#if errors}}
@@ -6,15 +7,21 @@
       {{/each}}
     {{/if}}
     <form id="signin" method="POST" action="/login">
-        <div class="form">
-            <i class="fa fa-user prefix"></i>
+        <div class="form-group">
+            <label>Username</label>
             <input type="text" name="username" class="form-control input-lg" placeholder="Your username" required/>
         </div>
-        <div class="form">
-            <i class="fa fa-lock prefix"></i>
+        <div class="form-group">
+            <label>Password</label>
             <input type="password" name="password" class="form-control input-lg" placeholder="Password" required/>        
         </div>
         <br><br>
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
 </div>
+
+<style>
+
+label{
+    background-color: transparent;
+}
