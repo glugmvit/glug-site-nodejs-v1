@@ -1,4 +1,5 @@
 .bg { 
+   
    background-image:url('../images/back2.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -10,10 +11,11 @@
 /*-------------------------------------------------
 BANNER CLASSES
 -------------------------------------------------*/
-.banner-wrapper{border:2px solid #e5e5e5;background:none; repeat-x #ffffff; margin-top:0.002%;margin-left:5%; margin-right:5%; overflow:hidden;}
+.banner-wrapper{border:2px solid #e5e5e5;background:none; repeat-x #ffffff; margin-top:0.002%;margin-left:5%; margin-right:0%; overflow:hidden;}
 .banner-wrapper img {
-	width:250px;
-	height:250px;
+        
+	width:100%;
+	height:500px;
 border-radius:5px;
 
 }
@@ -22,8 +24,8 @@ border-radius:5px;
 	border: 1px #70b8ff solid;
 border-radius:5px;
 }
-.banner{float:left; margin-left:9px; margin-top:9px; margin-bottom:9px;border-radius:5px;}
-.banner-content{width:100%; float:left; margin-top:130px; margin-right:6px;display:inline;}
+.banner{width:100%;float:left; margin-left:9px; margin-top:9px; margin-bottom:9px;border-radius:5px;}
+.banner-content{width:100%; float:left; margin-top:130px; margin-right:6px;display:inline;text-align:center;}
 .banner-content h1{font-family:font-family: 'Tienne', serif; font-size:30px; color:#e5703d; text-transform:uppercase; font-weight:normal;}
 .banner-content h2{color:#bbbbbb; font-family: 'Lato', sans-serif; font-size:22px; font-weight:normal; text-transform:none;display:inline;}
 .banner-content p{color:#bbbbbb; font-size:12px; padding-top:20px;}
@@ -45,8 +47,8 @@ GENERAL CLASSES
 /*-------------------------------------------------
 3 PANELS CLASSS
 -------------------------------------------------*/
-.panel-wrapper { width:100%; overflow:hidden; margin-top:10px; border-bottom:1px solid #e2e2e2;display:inline;background:none;margin-left:10%}
-.panel-wrapper .panel{float:left; width:95%; margin-bottom:5px;display:inline;margin-left:65px;margin-right:65px;background:none;}
+.panel-wrapper { width:inline; overflow:hidden; margin-top:10px; border-bottom:1px solid #e2e2e2;display:inline;background:none;margin-left:10%}
+.panel-wrapper .panel{float:left; width:inline; margin-bottom:5px;display:inline;margin-left:65px;margin-right:0px;background:none;}
 .panel-wrapper .title{padding-bottom:2px;}
 .panel-wrapper .content p{line-height:18px;}
 .panel-wrapper .button-link{ padding-top:26px;}
@@ -86,7 +88,7 @@ MIDDLE 2 PANELS CLASSS
 LAYOUT CLASSS
 -------------------------------------------------*/
 .page-wrapper { width:100%; overflow:hidden; margin-top:5px; padding-bottom:60px;margin-left:0px;display:inline-block;float:left;background:none;}
-.page-wrapper .panel{float:left; width:100%; margin-bottom:10px;display:inline;margin-left:65px;margin-right:65px;float:left;background:none;}
+.page-wrapper .panel{float:left; width:100%; margin-bottom:10px;display:inline;margin-left:65px;margin-right:0px;float:left;background:none;}
 
 
 .primary-content { float:left; margin-left:0px; width:100%; overflow:hidden; border-right:1px solid #e2e2e2;}
@@ -127,17 +129,19 @@ a.link{
 a:hover{
     color:#00B4FF;
 }
-#footer
-{
-	height:80px;
-	width:inline;
-	margin:2200px 10px 10px 10px;
-	background-color: #70757c;
-	text-align:center;
-	padding: 5px;
-	border:2px solid black;
+#footer {
+    
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 5em;
+    margin-top: -3em;
+    background-color: #70757c;
+    text-align:center;
+    padding: 5px;
+    border:2px solid black;
+	
 }
-
 
 
 
@@ -146,11 +150,41 @@ a:hover{
 * {box-sizing:border-box}
 body {font-family: Verdana,sans-serif;}
 
+
+.mySlides {
+  display: none;
+ }
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
 }
 
 /* Caption text */
@@ -175,6 +209,7 @@ body {font-family: Verdana,sans-serif;}
 
 /* The dots/bullets/indicators */
 .dot {
+   cursor:pointer;
   height: 13px;
   width: 13px;
   margin: 0 2px;
@@ -184,7 +219,7 @@ body {font-family: Verdana,sans-serif;}
   transition: background-color 0.6s ease;
 }
 
-.active {
+.active, .dot:hover {
   background-color: #717171;
 }
 
@@ -193,7 +228,7 @@ body {font-family: Verdana,sans-serif;}
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 5.5s;
 }
 
 @-webkit-keyframes fade {
