@@ -42,21 +42,27 @@
     {{/if}}
 </div>
 <div class="row">
-<div class="col-lg-12">
-  {{#if success_msg}}
-    <div class="col-md-3 alert alert-success">{{success_msg}}</div>
-  {{/if}}
-
-  {{#if error_msg}}
-    <div class="col-md-3 alert alert-danger">{{error_msg}}</div>
-  {{/if}}
-
-  {{#if error}}
-    <div class="col-md-3 alert alert-danger">{{error}}</div>
-  {{/if}}
-  
-  {{{body}}}
+    <!-- <div class="col-md-12"> -->
+        <div class="col-md-10 col-md-offset-1"></div>
+        {{#if error_msg}}
+        <div class="col-md-10 col-md-offset-2">
+            <div class="alert alert-danger" style="width: 80%;">{{error_msg}}</div>
+        </div>
+        {{/if}}
+        {{#if error}}
+        <div class="col-md-10 col-md-offset-2">
+            <div class="alert alert-danger" style="width: 80%;">{{error}}</div>
+        </div>
+        {{/if}}
+        {{#if success_msg}}
+        <div class="col-md-10 col-md-offset-1">
+            <div class="alert alert-success" style="width: 60;">{{success_msg}}</div>
+        </div>
+        {{/if}}
+  <!-- </div> -->
 </div>
+  {{{body}}}
+
 </div>
 </body>
 <!-- Compiled and minified CSS -->

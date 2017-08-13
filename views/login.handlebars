@@ -1,11 +1,6 @@
 
 <div class="container" style="margin:0;width:30%;margin:auto">
     <h2 class="page-header">Account Login</h2>
-    {{#if errors}}
-      {{#each errors}}
-        <div class="col-md-3 alert {{type}}">{{msg}}</div>
-      {{/each}}
-    {{/if}}
     <form id="signin" method="POST" action="/login">
         <div class="form-group">
             <label>Username</label>

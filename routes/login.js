@@ -15,27 +15,29 @@ router.post('/',function(req, res) {
         if(!user){
 
             // if user is not found, then flash not found message.
-            req.flash('error_msg', 'unknown user');
+            req.flash('error', 'Unknown user');
             res.redirect('/login');
         }
- 
-        User.comparePassword(req.body.password, user.password, function(err, isMatch){
-            if(err) throw err;
-            
-            if(isMatch){
+        else {
+            // if user found then only check for password.
+            User.comparePassword(req.body.password, user.password, function(err, isMatch){
+                if(err) throw err;
+                
+                if(isMatch){
 
-                // if user found and password is corrent, create a session for the user,
-                // and flash user logged in message.
-                req.session.user = user;
-                req.flash('success_msg', 'You are successfully logged in');
-                res.redirect('/dashboard')
-            } else {
+                    // if user found and password is corrent, create a session for the user,
+                    // and flash user logged in message.
+                    req.session.user = user;
+                    req.flash('success_msg', 'You are successfully logged in');
+                    res.redirect('/dashboard')
+                } else {
 
-                // if password doesn't match, flash message for invalid password.
-                req.flash('error_msg', 'Invalid Password');
-                res.redirect('/login');
-            }
-        });
+                    // if password doesn't match, flash message for invalid password.
+                    req.flash('error', 'Invalid Password');
+                    res.redirect('/login');
+                }
+            });
+        }
     });
 });
 module.exports = router;
