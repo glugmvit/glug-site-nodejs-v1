@@ -21,18 +21,12 @@
 a.link{
     text-decoration: none;
     color:#00cc33;
-    font:15px/30px Georgia, serif; 
+    font:15px/30px Georgia, serif;
 }
 a:hover{
     color:#00B4FF;
 }
-/* Rest page */
-body{
-    top:0;
-	background-image:url(../images/back2.jpg);
-	background-repeat: no-repeat;
-    background-attachment: fixed;
-}
+
 #head1	{
 	padding: 15px;
 	font: 50px;
@@ -85,6 +79,3 @@ body{
     background-color:#263238;
     text-align: center;
 }
-
-
-
