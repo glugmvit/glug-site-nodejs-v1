@@ -65,14 +65,38 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#opensource">OpenSource</a></li>
                     <li><a href="/team">Our team</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    {{#if user}}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">{{user.username}}&nbsp;<i class="fa fa-angle-down"></i>
+                            </a>
+                            <div class="navbar-default dropdown-menu drop" aria-labelledby="navbarDropdownMenuLink">
+                              <a class="dropdown-item" href="/dashboard"><p>Dashboard</p></a>
+                              <hr>
+                              <a class="dropdown-item" href="#"><p>Profile</p></a>
+                              <hr>
+                              <a class="dropdown-item" href="/logout"><p>Logout</p></a>
+                            </div>
+                        </li>
+                    {{else}}
+                        <li><a href="/register">Signup</a></li>
+                        <li><a href="/login">Login</a></li>
+                    {{/if}}
                 {{else}}
                     <li><a href="/">home </a></li>
                     {{#if user}}
-                        <li><a href="/activites">Activities</a></li>
+                        <li><a href="/activities">Activities</a></li>
                         <li><a href="/upcoming">Upcoming</a></li>
-                        <li><a id="name">{{user.username}}</a></li>
-                        <li><a id="name" href="/logout">Logout</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">{{user.username}}&nbsp;<i class="fa fa-angle-down"></i>
+                            </a>
+                            <div class="navbar-default dropdown-menu drop" aria-labelledby="navbarDropdownMenuLink">
+                              <a class="dropdown-item" href="/dashboard"><p>Dashboard</p></a>
+                              <hr>
+                              <a class="dropdown-item" href="#"><p>Profile</p></a>
+                              <hr>
+                              <a class="dropdown-item" href="/logout"><p>Logout</p></a>
+                            </div>
+                        </li>
                     {{else}}
                         <li><a href="/register">register</a></li>
                         <li><a href="/login">Login</a></li>
@@ -84,7 +108,9 @@
     </div>
 </nav>
 {{!-- Navigation end --}}
-
+{{#if home}}
+<a href="#contact"><div id="mycontact"><i class="fa fa-envelope"></i><span> CONTACT</span></div></a>
+{{/if}}
 <main>
 {{{body}}}
 </main>
