@@ -6,67 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="logo-sq.png">
     <title>GLUG MVIT</title>
-    <link href="css/all.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript" src="js/jscript.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="css/team.css" rel="stylesheet" type="text/css" />
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
+
+    {{!-- Bootstrap CSS --}}
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    {{!-- Font Awesome CSS --}}
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    {{!-- Custom CSS here --}}
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/team.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    {{!-- Custom Fonts here --}}
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700" rel="stylesheet">
+
+    {{!-- Bootstrap and Jquery JS --}}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="sweetalert2/dist/sweetalert2.min.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Aguafina+Script" /> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/custom.js"></script>
+
 </head>
-<body class="container-fluid">
-<div id="navibar">
-    <div class="item"><a class="link" href="/">Home</a></div>
-    <div class="item"><a class="link" href="/about">About</a></div>
-    <div class="item"><a class="link" href="/journey">Journey</a></div>
-    <div class="item"><a class="link" href="/activities">Activities</a></div>
-    <div class="item"><a class="link" href="/upcoming">Upcoming Event</a></div>
-    <div class="item"><a class="link" href="/team">The Team</a></div>
-    <div class="item"><a class="link" href="/contact">Contact Us</a> </div>
-    {{#if user}}
-        <div class="item"><a class="link" href="/dashboard">Dashboard</a></div>
-        <div class="item"><a class="link" href="/logout">Logout</a></div>
-        <div class="item"><i style="color:white">{{user.fname}}</i></div>
-    {{else}}
-        <div class="item"><a class="link" href="/login">Login</a></div>
-        <div class="item"><a class="link" href="/register">Register</a></div>
+<body>
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1"></div>
+    {{#if error_msg}}
+        <!-- The snackbar -->
+        <div id="snackbar">{{error_msg}}</div>
+        <script type="text/javascript">toast();</script>
+    {{/if}}
+    {{#if error}}
+        <div id="snackbar">{{error}}</div>
+        <script type="text/javascript">toast();</script>
+    {{/if}}
+    {{#if success_msg}}
+        <div id="snackbar">{{success_msg}}</div>
+        <script type="text/javascript">toast();</script>
     {{/if}}
 </div>
-<div class="row">
-    <!-- <div class="col-md-12"> -->
-        <div class="col-md-10 col-md-offset-1"></div>
-        {{#if error_msg}}
-        <div class="col-md-10 col-md-offset-2">
-            <div class="alert alert-danger" style="width: 80%;">{{error_msg}}</div>
-        </div>
-        {{/if}}
-        {{#if error}}
-        <div class="col-md-10 col-md-offset-2">
-            <div class="alert alert-danger" style="width: 80%;">{{error}}</div>
-        </div>
-        {{/if}}
-        {{#if success_msg}}
-        <div class="col-md-10 col-md-offset-1">
-            <div class="alert alert-success" style="width: 60;">{{success_msg}}</div>
-        </div>
-        {{/if}}
-  <!-- </div> -->
-</div>
-  {{{body}}}
 
-</div>
+{{!-- Navigation --}}
+<nav class="nav navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false" aria-controls="navbar">
+                <span class="fa fa-bars"></span>
+            </button>
+                <a href="/" class="navbar-brand">GLUG</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="mynavbar">
+                <ul class="nav navbar-nav">
+                {{#if home}}
+                    <li class="active"><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#opensource">OpenSource</a></li>
+                    <li><a href="/team">Our team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                {{else}}
+                    <li><a href="/">home </a></li>
+                    {{#if user}}
+                        <li><a href="/activites">Activities</a></li>
+                        <li><a href="/upcoming">Upcoming</a></li>
+                        <li><a id="name">{{user.username}}</a></li>
+                        <li><a id="name" href="/logout">Logout</a></li>
+                    {{else}}
+                        <li><a href="/register">register</a></li>
+                        <li><a href="/login">Login</a></li>
+                    {{/if}}
+                {{/if}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+{{!-- Navigation end --}}
+
+<main>
+{{{body}}}
+</main>
+
+{{!-- Custom JS here --}}
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/navbar.js"></script>
+
 </body>
-<!-- Compiled and minified CSS -->
-{{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"> --}}
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 </html>

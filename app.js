@@ -15,7 +15,6 @@ db.once('open', function() {
 
 // Add a variable for a new page here
 var home = require('./routes/home');
-var about = require('./routes/about');
 var contact = require('./routes/contact-us');
 var journey = require('./routes/journey');
 var team = require('./routes/team');
@@ -69,7 +68,6 @@ app.use(function (req, res, next) {
 
 // Use the variable for the new page here
 app.use('/', home);
-app.use('/about', about);
 app.use('/contact', contact);
 app.use('/journey', journey);
 app.use('/team', team);
