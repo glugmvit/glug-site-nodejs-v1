@@ -1,58 +1,57 @@
+{{#ifCond user.type "admin"}}
+
+  <div class="container pagediv">
+    <h1>Admin dashboard</h1>
+  </div>
+
+{{else}}
+
 <div class="container pagediv">
-       <div class="row">
-         <div class="col-md-3">
-         <div><br><br></div>
-           <img class="img-responsive users" src="images/user.png" alt="User_Image" >
-           <h3 class="username">Username</h3>
-           <h4 class="text-center">A student with great interest in learning n developing new skills.Highly motivated to strive forward in life.</h4>
-            <div class="text-center"><button class="btn btn-primary btn-sx" type="button">Contact Me!</button></div>
-         </div>
+  <div class="row">
+   <div class="col-md-3">
+   <div><br><br></div>
+     <img class="img-responsive users" src="https://www.atomix.com.au/media/2015/06/atomix_user31.png" alt="User_Image" >
+     <h3 class="username">{{user.username}}</h3>
+     <h4 class="text-center">A student with great interest in learning n developing new skills.Highly motivated to strive forward in life.</h4>
+      <div class="text-center"><button class="btn btn-primary btn-sx" type="button">links</button></div>
+   </div>
 
-         <div class="col-md-9">
-            <div><br><br></div>
-            <div class="seperator">
-            <div id="exTab1"> 
-            <ul  class="nav nav-pills pills-tab">
-                  <li class="active" >
-                    <a  href="#1a" data-toggle="tab">Overview</a>
-                  </li>
-                  <li><a href="#2a" data-toggle="tab">Using nav-pills</a>
-                  </li>
-                  <li><a href="#3a" data-toggle="tab">Applying clearfix</a>
-                  </li>
-                  <li><a href="#4a" data-toggle="tab">Background color</a>
-                  </li>
-                </ul>
+   <div class="col-md-9">
+      <div><br><br></div>
+      <div class="seperator">
+      <div id="exTab1"> 
+      <ul  class="nav nav-pills pills-tab">
+            <li class="active" >
+              <a href="#1a" data-toggle="tab">Overview</a>
+            </li>
+            <li><a href="#2a" data-toggle="tab">Using nav-pills</a>
+            </li>
+            <li><a href="#3a" data-toggle="tab">Applying clearfix</a>
+            </li>
+            <li><a href="#4a" data-toggle="tab">Background color</a>
+            </li>
+          </ul>
 
-                  <div class="tab-content clearfix">
-                    <div class="tab-pane active" >
-                      <h3>Alternatively referred to as dummy text or filler text, placeholder text is text that is used to preview fonts, spoof an e-mail spam filter, or reserve a specific place on a web page or other document for images, text, or some other object. For example, the designer of an online newsletter may have a template that they fill with dummy text so they can get an idea of how to layout a page looks. One of the most common filler texts is lorem ipsum.</h3>
-                    </div>
-                    <div class="tab-pane" >
-                      <h3>Alternatively referred to as dummy text or filler text, placeholder text is text that is used to preview fonts, spoof an e-mail spam filter, or reserve a specific place on a web page or other document for images, text, or some other object. For example, the designer of an online newsletter may have a template that they fill with dummy text so they can get an idea of how to layout a page looks. One of the most common filler texts is lorem ipsum.</h3>
-                    </div>
-                    <div class="tab-pane">
-                      <h3>Alternatively referred to as dummy text or filler text, placeholder text is text that is used to preview fonts, spoof an e-mail spam filter, or reserve a specific place on a web page or other document for images, text, or some other object. For example, the designer of an online newsletter may have a template that they fill with dummy text so they can get an idea of how to layout a page looks. One of the most common filler texts is lorem ipsum.</h3>
-                    </div>
-                      <div class="tab-pane" >
-                      <h3>We use css to change the background color of the content to be equal to the tab</h3>
-                    </div>
-                  </div>
-                  </div>
+            <div class="tab-content">
+              <div class="tab-pane active" id="1a">
+                <h3>some other object. For example, the designer of an online newsletter may have a template that they fill with dummy text so they can get an idea of how to layout a page looks. One of the most common filler texts is lorem ipsum.</h3>
               </div>
+              <div class="tab-pane" id="2a">
+                <h3>Alternatively referred to as dummy text or filler text, placeholder text is text that is used to preview fonts, spoof an e-mail spam filter, or reserve a specific place on a web page or other document for images, text, or some other object. For example, the designer of an online newsletter may have a template that they fill with dummy text so they can get an idea of how to .</h3>
+              </div>
+              <div class="tab-pane" id="3a">
+                <h3>Alternatively referred to as dummy text or filler text</h3>
+              </div>
+                <div class="tab-pane" id="4a">
+                <h3>We use css to change the background color of the content to be equal to the tab</h3>
+              </div>
+            </div>
+            </div>
+        </div>
+      <hr></hr>
+   </div>
+  </div>
+  </div>
+</div>
 
-
-            <hr></hr>
-
-            <!-- Bootstrap core JavaScript
-                ================================================== -->
-              <!-- Placed at the end of the document so the pages load faster -->
-              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-              <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-         </div>
-       </div>
-
-       
-
-       
-     </div>
+{{/ifCond}}

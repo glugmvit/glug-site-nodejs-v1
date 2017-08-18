@@ -24,6 +24,9 @@ var UserSchema = mongoose.Schema({
 	},
 	number: {
 		type: Number
+	},
+	type: {
+		type: String
 	}
 });
 

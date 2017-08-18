@@ -6,11 +6,14 @@ router.get('/', function(req, res){
 
 	// only render used the user is logged in.
 	if(req.session.user)
-		res.render('dashboard', {user: req.session.user});
+		if(req.session.user.type=="admin")
+			res.render('dashboard', {user: req.session.user,admin:true});
+		else
+			res.render('dashboard', {user: req.session.user});
 
 	// otherwise redirect to the login Page
 	else
-		res.redirect('users/login');
+		res.redirect('/login');
 });
 
 module.exports = router;

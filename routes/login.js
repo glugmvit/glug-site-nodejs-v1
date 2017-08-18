@@ -5,7 +5,11 @@ var User = require('../models/users');
 
 // Login
 router.get('/', function(req, res){
-	res.render('login');
+    var admin = req.query.admin;
+    if(admin)
+        res.render('login',{admin:"admin"});
+    else
+	   res.render('login');
 });
 
 router.post('/',function(req, res) {
@@ -29,7 +33,7 @@ router.post('/',function(req, res) {
                     // and flash user logged in message.
                     req.session.user = user;
                     req.flash('success_msg', 'You are successfully logged in');
-                    res.redirect('/dashboard')
+                    res.redirect('/dashboard');
                 } else {
 
                     // if password doesn't match, flash message for invalid password.

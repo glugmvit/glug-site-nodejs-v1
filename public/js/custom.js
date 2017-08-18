@@ -9,3 +9,13 @@ function toast() {
     // After 3 seconds, remove the show class from DIV
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
+
+// Show hide dropmenu navbar
+function show() {
+    var x = document.getElementById('drop');
+    x.style.display = "block";
+}
+function hide() {
+    var x = document.getElementById('drop');
+    x.style.display = "none";
+}

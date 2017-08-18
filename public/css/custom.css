@@ -3,6 +3,10 @@ body {
   font-family: 'Open Sans', sans-serif;
     overflow-x: hidden; 
 }
+/*Disable scroll bar*/
+body::-webkit-scrollbar { 
+    display: none; 
+}
 ol, ul {
   list-style: none;
 }
@@ -37,7 +41,7 @@ h1, h2, h3, h4, h5, h6
     opacity: 0.8;
 }
 .drop {
-  margin-top:25px !important;
+  padding-top:30px !important;
   text-align: center;
   border: 0;
   text-decoration: none;
@@ -63,7 +67,7 @@ h1, h2, h3, h4, h5, h6
 }
 .navbar-brand
 {
-  padding: 0px;
+  padding: 5px;
   height: inherit;
   font-family: 'Lato', sans-serif;
 }
@@ -92,18 +96,21 @@ h1, h2, h3, h4, h5, h6
 
 .navbar-fixed-top {
 
-    padding: 40px 0;
+    padding: 22px 0;
     transition: all 0.5s;
 }
 
 .navbar-fixed-top, .navbar-fixed-bottom {
-  position: relative; /* this can also be static */
+  position: fixed; /* this can also be static */
 }
 .top-nav-collapse {
     background: rgba(0,0,0,0.8);
-    padding: 25px 0;
+    padding: 20px 0;
 }
 
+li.dropdown:hover > .dropdown-menu {
+    display: block;
+}
 
 .wrapper
 {
@@ -399,14 +406,27 @@ a, a:hover
     }
 }
 @media (min-width: 20px) and (max-width: 450px){
+    .navbar-fixed-top {
+        padding: 10px;
+    }
+    .navbar-fixed-top, .navbar-fixed-bottom {
+      position: fixed; /* this can also be static */
+    }
     .navbar-toggle:hover, .navbar-toggle{
-        background-color: #fff;
-        color: #000;
+        background-color: #000;
+        color:black;
     }
     .navbar-toggle{
         margin-top: 0px;
     }
+    .navbar-toggle-span{
+      color: red;
+    }
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+      background-color: #fff;
+    }
     .navbar-default .navbar-nav > li > a{
+        font-weight: bold;
         text-align: center;
         background-color: rgba(255, 255, 255, 0.32);
         color: #000;
@@ -414,6 +434,9 @@ a, a:hover
     .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
         background-color: rgba(255, 255, 255, 0.32);
         color: #FFD34E;
+    }
+    .drop p {
+      color: black;
     }
     .top-title{
         font-size: 15px;
@@ -573,7 +596,7 @@ However, delay the fade out process for 2.5 seconds */
 
 .tab-pane > h3{
   color: black;
-  height: 650px;
+  height: 250px;
 
 }
 
