@@ -17,5 +17,5 @@ A website for GLUG MVIT.
 2) ```npm install -g nodemon ```
 3) Clone repository
 4) ```npm install``` inside the folder
-5) ```nodemon index.js```
+5) ```node app.js```
 6) goto localhost:3000
