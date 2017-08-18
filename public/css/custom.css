@@ -1,3 +1,4 @@
+
 body {
   line-height: 1.5;
   font-family: 'Open Sans', sans-serif;
@@ -89,8 +90,13 @@ h1, h2, h3, h4, h5, h6
 }
 
 .navbar-fixed-top {
+    position: relative;
     padding: 40px 0;
     transition: all 0.5s;
+}
+
+.navbar-fixed-bottom {
+  position: relative; 
 }
 
 .top-nav-collapse {
@@ -164,6 +170,7 @@ h1, h2, h3, h4, h5, h6
 /****/
 #cta-1
 {
+  width: 100%;
   padding: 40px 0px;
 }
 .cta-info
@@ -501,8 +508,9 @@ However, delay the fade out process for 2.5 seconds */
   text-align: center;
   color: white;
   background-color: rgba(227, 30, 36, 0.8);
-  right: 1%;
+  right: 4%;
   z-index: 999;
   font-size: 15px;
   bottom: 0;
 }
+
