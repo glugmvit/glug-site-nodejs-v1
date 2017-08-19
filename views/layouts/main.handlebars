@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="logo-sq.png">
+    <meta name="theme-color" content="#3a3a3a">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="images/favicon.ico">
     <title>GLUG MVIT</title>
 
     {{!-- Bootstrap CSS --}}
@@ -21,7 +22,7 @@
 
     {{!-- Custom Fonts here --}}
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700" rel="stylesheet">
-
+      
     {{!-- Bootstrap and Jquery JS --}}
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
@@ -29,7 +30,7 @@
     <script src="js/custom.js"></script>
 
 </head>
-<body>
+<body scroll="no">
 
 <div class="row">
     <div class="col-md-10 col-md-offset-1"></div>
@@ -53,9 +54,9 @@
     <div class="container">
         <div class="col-md-12">
             <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false" aria-controls="navbar">
-                <span class="fa fa-bars"></span>
-            </button>
+            <a class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false" aria-controls="navbar">
+                <span class="fa fa-lg fa-chevron-circle-down navbar-toggle-span"></span>
+            </a>
                 <a href="/" class="navbar-brand">GLUG</a>
             </div>
             <div class="collapse navbar-collapse navbar-right" id="mynavbar">
@@ -67,13 +68,13 @@
                     <li><a href="/team">Our team</a></li>
                     <li><a href="/upcoming">Upcoming Events</a>
                     {{#if user}}
-                        <li class="nav-item dropdown">
+                        <li class="dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">{{user.username}}&nbsp;<i class="fa fa-angle-down"></i>
                             </a>
                             <div class="navbar-default dropdown-menu drop" aria-labelledby="navbarDropdownMenuLink">
                               <a class="dropdown-item" href="/dashboard"><p>Dashboard</p></a>
                               <hr>
-                              <a class="dropdown-item" href="#"><p>Profile</p></a>
+                              <a class="dropdown-item" href="/profile"><p>Profile</p></a>
                               <hr>
                               <a class="dropdown-item" href="/logout"><p>Logout</p></a>
                             </div>
@@ -87,13 +88,13 @@
                     {{#if user}}
                         <li><a href="/activities">Activities</a></li>
                         <li><a href="/upcoming">Upcoming</a></li>
-                        <li class="nav-item dropdown">
+                        <li class="dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">{{user.username}}&nbsp;<i class="fa fa-angle-down"></i>
                             </a>
                             <div class="navbar-default dropdown-menu drop" aria-labelledby="navbarDropdownMenuLink">
                               <a class="dropdown-item" href="/dashboard"><p>Dashboard</p></a>
                               <hr>
-                              <a class="dropdown-item" href="#"><p>Profile</p></a>
+                              <a class="dropdown-item" href="/profile"><p>Profile</p></a>
                               <hr>
                               <a class="dropdown-item" href="/logout"><p>Logout</p></a>
                             </div>

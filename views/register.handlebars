@@ -1,16 +1,8 @@
+
 <div class="container pagediv">
     <div class="row">
-        <h2 class="page-header">Register</h2>
-    </div>
-    {{#if errors}}
-      {{#each errors}}
-        <div class="col-md-3 alert {{type}}">{{msg}}</div>
-      {{/each}}
-    {{/if}}
-    <div class="row">
-        <div class="col-sm-offset-1 col-sm-2">
-        </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6 col-sm-offset-3">
+            <h2 class="page-header">Register</h2>
             <form method="POST" action="/register">
                 <div class="row">
                     <div class="col-xs-6 col-md-6 form-group">
@@ -31,7 +23,7 @@
                     <input type='tel' name="number" pattern="[789][0-9]{9}" class="form-control input-lg" placeholder="Your PhoneNumber" required/>
                 </div>
                 <div class="form-group">
-                    <label>Username *</label>
+                    <label>Username *</label> 
                     <input type="text" name="username" class="form-control input-lg" placeholder="Your username" required/>
                 </div>
                 <div class="form-group">
@@ -45,6 +37,11 @@
                 <div class="form-group">
                     <label>USN *</label>
                     <input type="text" name="usn" maxlength="10" value="" class="form-control input-lg" pattern="^[1234][a-zA-Z]{2}[0-9]{2}(cs|is|ec|me|cv|ee|it|te|CS|IS|EC|ME|CV|EE|IT|TE)[0-9]{3}$" placeholder="Your USN" required/>
+                    {{#if admin}}
+                        <input type="text" name="type" value="admin" hidden="true">
+                    {{else}}
+                        <input type="text" name="type" value="student" hidden="true">
+                    {{/if}}
                 </div>
                 
                 <br/>
@@ -54,9 +51,3 @@
         </div>
     </div>
 </div>
-
-<style>
-
-label{
-    background-color: transparent;
-}

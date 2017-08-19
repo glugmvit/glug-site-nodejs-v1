@@ -5,7 +5,12 @@ var User = require('../models/users');
 
 // Register
 router.get('/', function(req, res){
-	res.render('register');
+    var key = "glugmvit";
+    var que = req.query.key;
+    if(que == key)
+        res.render('register',{admin:"true"});
+    else
+	   res.render('register');
 });
 
 // Register User
@@ -18,13 +23,14 @@ router.post('/', function(req, res){
     }
 
     var newUser = new User({
-        usn: req.body.usn,
+        usn: req.body.usn.toUpperCase(),
         number: req.body.number,
         fname: req.body.fname,
         lname: req.body.lname,
         email:req.body.email,
         username: req.body.username,
-        password: req.body.password
+        password: req.body.password,
+        type: req.body.type
     });
 
     // check if the username, usn or email is used before or NOT

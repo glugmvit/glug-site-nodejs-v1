@@ -3,6 +3,7 @@ var path = require('path');
 var flash = require('connect-flash');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
+var handlebars = require('handlebars');
 var session = require('express-session');
 var mongoose = require('mongoose');
 
@@ -24,7 +25,7 @@ var logout = require('./routes/logout');
 var dashboard = require('./routes/dashboard');
 var upcoming = require('./routes/upcoming');
 var activities = require('./routes/activities');
-
+var profile = require('./routes/profile');
 
 // Init App
 var app = express();
@@ -39,6 +40,13 @@ var server = require('http').Server(app).listen(port);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', exphbs({defaultLayout:'main'}));
 app.set('view engine', 'handlebars');
+
+handlebars.registerHelper('ifCond', function(v1, v2, options) {
+  if(v1 === v2) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
 
 // BodyParser Middleware
 app.use(bodyParser.json()); // to support JSON bodies
@@ -77,6 +85,7 @@ app.use('/logout', logout);
 app.use('/dashboard', dashboard);
 app.use('/upcoming', upcoming);
 app.use('/activities', activities);
+app.use('/profile', profile);
 
 app.get('*', function(req, res){
   res.render('404',{layout:false});

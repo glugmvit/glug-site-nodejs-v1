@@ -1,7 +1,11 @@
 body {
   line-height: 1.5;
   font-family: 'Open Sans', sans-serif;
-    overflow-x: hidden; 
+    overflow-x: hidden;
+}
+/*Disable scroll bar*/
+body::-webkit-scrollbar {
+    display: none;
 }
 ol, ul {
   list-style: none;
@@ -32,10 +36,12 @@ h1, h2, h3, h4, h5, h6
 }
 /**media Queries**/
 .navbar-default {
-  background-color: rgba(0, 0, 0, 0.41);
+
+  background: black;
+    opacity: 0.8;
 }
 .drop {
-  margin-top:25px !important;
+  padding-top:30px !important;
   text-align: center;
   border: 0;
   text-decoration: none;
@@ -61,7 +67,7 @@ h1, h2, h3, h4, h5, h6
 }
 .navbar-brand
 {
-  padding: 0px;
+  padding: 5px;
   height: inherit;
   font-family: 'Lato', sans-serif;
 }
@@ -89,15 +95,22 @@ h1, h2, h3, h4, h5, h6
 }
 
 .navbar-fixed-top {
-    padding: 40px 0;
+
+    padding: 22px 0;
     transition: all 0.5s;
 }
 
+.navbar-fixed-top, .navbar-fixed-bottom {
+  position: fixed; /* this can also be static */
+}
 .top-nav-collapse {
     background: rgba(0,0,0,0.8);
-    padding: 25px 0;
+    padding: 20px 0;
 }
 
+li.dropdown:hover > .dropdown-menu {
+    display: block;
+}
 
 .wrapper
 {
@@ -258,7 +271,7 @@ h3.txt-tl {
     display: block;
 }
 .cta-txt h3 {
-    
+
     font-size: 32px;
     margin-bottom: 10px;
     font-weight: 700;
@@ -393,14 +406,27 @@ a, a:hover
     }
 }
 @media (min-width: 20px) and (max-width: 450px){
+    .navbar-fixed-top {
+        padding: 10px;
+    }
+    .navbar-fixed-top, .navbar-fixed-bottom {
+      position: fixed; /* this can also be static */
+    }
     .navbar-toggle:hover, .navbar-toggle{
-        background-color: #fff;
-        color: #000;
+        background-color: #000;
+        color:black;
     }
     .navbar-toggle{
         margin-top: 0px;
     }
+    .navbar-toggle-span{
+      color: red;
+    }
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+      background-color: #fff;
+    }
     .navbar-default .navbar-nav > li > a{
+        font-weight: bold;
         text-align: center;
         background-color: rgba(255, 255, 255, 0.32);
         color: #000;
@@ -408,6 +434,9 @@ a, a:hover
     .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
         background-color: rgba(255, 255, 255, 0.32);
         color: #FFD34E;
+    }
+    .drop p {
+      color: black;
     }
     .top-title{
         font-size: 15px;
@@ -459,7 +488,7 @@ a, a:hover
 #snackbar.show {
     visibility: visible; /* Show the snackbar */
 
-/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar.
 However, delay the fade out process for 2.5 seconds */
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
@@ -467,7 +496,7 @@ However, delay the fade out process for 2.5 seconds */
 
 /* Animations to fade the snackbar in and out */
 @-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;} 
+    from {bottom: 0; opacity: 0;}
     to {bottom: 30px; opacity: 1;}
 }
 
@@ -477,7 +506,7 @@ However, delay the fade out process for 2.5 seconds */
 }
 
 @-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;} 
+    from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
 }
 
@@ -501,8 +530,78 @@ However, delay the fade out process for 2.5 seconds */
   text-align: center;
   color: white;
   background-color: rgba(227, 30, 36, 0.8);
-  right: 1%;
+  right: 4%;
   z-index: 999;
   font-size: 15px;
   bottom: 0;
+}
+
+.seperator{
+  border-left: 1.5px solid #ccc;
+  padding-left: 20px;
+}
+
+
+
+.users{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.username{
+  text-align:center;
+}
+
+#exTab1 .tab-content {
+  color : white;
+  background-color:#f7f8f9;
+  padding : 5px 15px;
+}
+
+#exTab2 h3 {
+  color : white;
+  background-color: #f7f8f9;
+  padding : 5px 15px;
+}
+
+/* remove border radius for the tab */
+
+#exTab1 .nav-pills > li > a {
+  border-radius: 0;
+}
+
+/* change border radius for the tab , apply corners on top*/
+
+#exTab3 .nav-pills > li > a {
+  border-radius: 4px 4px 0 0 ;
+}
+
+#exTab3 .tab-content {
+  color : white;
+  background-color: #f7f8f9;
+  padding : 5px 15px;
+}
+
+.pills-tab > li > a{
+  color:black;
+  background-color: grey;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.tab-pane > h3{
+  color: black;
+}
+
+.nav-pills>li.active>a{
+  background-color: #f7f8f9;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    background-color: darkgrey;
 }
