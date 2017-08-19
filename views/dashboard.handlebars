@@ -5,32 +5,34 @@
   </div>
 
 {{else}}
-
+<br>
 <div class="container pagediv">
-  <div class="row">
+  <div class="row jumbotron">
    <div class="col-md-3">
    <div><br><br></div>
      <img class="img-responsive users" src="https://www.atomix.com.au/media/2015/06/atomix_user31.png" alt="User_Image" >
-     <h3 class="username">{{user.username}}</h3>
+     <div class="username">
+        <h4>{{user.username}}</h4>
+        <p>{{user.email}}</p>
+    </div>
      <h4 class="text-center">A student with great interest in learning n developing new skills.Highly motivated to strive forward in life.</h4>
-      <div class="text-center"><button class="btn btn-primary btn-sx" type="button">links</button></div>
-   </div>
 
-   <div class="col-md-9">
+
+
+   </div>
+   <div class="col-md-1"></div>
+   <div class="col-md-8">
       <div><br><br></div>
-      <div class="seperator">
-      <div id="exTab1"> 
-      <ul  class="nav nav-pills pills-tab">
-            <li class="active" >
-              <a href="#1a" data-toggle="tab">Overview</a>
-            </li>
-            <li><a href="#2a" data-toggle="tab">Using nav-pills</a>
-            </li>
-            <li><a href="#3a" data-toggle="tab">Applying clearfix</a>
-            </li>
-            <li><a href="#4a" data-toggle="tab">Background color</a>
-            </li>
-          </ul>
+      <div id="exTab1">
+        <ul  class="nav nav-pills pills-tab">
+              <li class="active" >
+                <a href="#1a" data-toggle="tab">Registered</a>
+              </li>
+              <li><a href="#2a" data-toggle="tab">Participated</a>
+              </li>
+              <li><a href="#3a" data-toggle="tab">Collaborate</a>
+              </li>
+        </ul>
 
             <div class="tab-content">
               <div class="tab-pane active" id="1a">
@@ -40,14 +42,13 @@
                 <h3>Alternatively referred to as dummy text or filler text, placeholder text is text that is used to preview fonts, spoof an e-mail spam filter, or reserve a specific place on a web page or other document for images, text, or some other object. For example, the designer of an online newsletter may have a template that they fill with dummy text so they can get an idea of how to .</h3>
               </div>
               <div class="tab-pane" id="3a">
-                <h3>Alternatively referred to as dummy text or filler text</h3>
-              </div>
-                <div class="tab-pane" id="4a">
-                <h3>We use css to change the background color of the content to be equal to the tab</h3>
+                <h3>Want to help out in building something GREAT!!</h3>
+                <img src="/images/bh.png" style="width:50%;height:40%;">
+                <p>Contribute to the community by helping in Web and Android development.</p>
+                <a href="https://github.com/GlugMVIT" target="_blank" class="btn btn-primary">Visit Page</a>
               </div>
             </div>
             </div>
-        </div>
       <hr></hr>
    </div>
   </div>

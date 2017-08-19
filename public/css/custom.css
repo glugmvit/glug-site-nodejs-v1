@@ -1,11 +1,11 @@
 body {
   line-height: 1.5;
   font-family: 'Open Sans', sans-serif;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 /*Disable scroll bar*/
-body::-webkit-scrollbar { 
-    display: none; 
+body::-webkit-scrollbar {
+    display: none;
 }
 ol, ul {
   list-style: none;
@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6
 }
 /**media Queries**/
 .navbar-default {
-  
+
   background: black;
     opacity: 0.8;
 }
@@ -271,7 +271,7 @@ h3.txt-tl {
     display: block;
 }
 .cta-txt h3 {
-    
+
     font-size: 32px;
     margin-bottom: 10px;
     font-weight: 700;
@@ -488,7 +488,7 @@ a, a:hover
 #snackbar.show {
     visibility: visible; /* Show the snackbar */
 
-/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar.
 However, delay the fade out process for 2.5 seconds */
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
@@ -496,7 +496,7 @@ However, delay the fade out process for 2.5 seconds */
 
 /* Animations to fade the snackbar in and out */
 @-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;} 
+    from {bottom: 0; opacity: 0;}
     to {bottom: 30px; opacity: 1;}
 }
 
@@ -506,7 +506,7 @@ However, delay the fade out process for 2.5 seconds */
 }
 
 @-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;} 
+    from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
 }
 
@@ -551,7 +551,6 @@ However, delay the fade out process for 2.5 seconds */
 
 .username{
   text-align:center;
-
 }
 
 #exTab1 .tab-content {
@@ -591,13 +590,11 @@ However, delay the fade out process for 2.5 seconds */
   padding-right: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
-  
+
 }
 
 .tab-pane > h3{
   color: black;
-  height: 250px;
-
 }
 
 .nav-pills>li.active>a{
@@ -608,4 +605,3 @@ However, delay the fade out process for 2.5 seconds */
     color: #fff;
     background-color: darkgrey;
 }
-
