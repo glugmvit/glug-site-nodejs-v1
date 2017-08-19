@@ -10,15 +10,15 @@
   <div class="row jumbotron">
    <div class="col-md-3">
    <div><br><br></div>
-     <img class="img-responsive users" src="https://www.atomix.com.au/media/2015/06/atomix_user31.png" alt="User_Image" >
+     <object class="img-responsive img-circle users" data="http://res.cloudinary.com/dttf46owb/image/upload/v1503147377/user_photos/{{user.usn}}.jpg" type="image/png">
+        <img class="img-responsive users" src="images/no-image-icon.png" alt="User_Image" > 
+      </object>
      <div class="username">
         <h4>{{user.username}}</h4>
         <p>{{user.email}}</p>
     </div>
-     <h4 class="text-center">A student with great interest in learning n developing new skills.Highly motivated to strive forward in life.</h4>
-
-
-
+     <h4 class="text-center">{{user.bio}}</h4>
+     <a style="color:blue" href="/profile">Profile Settings</a>
    </div>
    <div class="col-md-1"></div>
    <div class="col-md-8">

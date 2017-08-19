@@ -23,7 +23,7 @@ router.post('/', function(req, res){
     }
 
     var newUser = new User({
-        usn: req.body.usn,
+        usn: req.body.usn.toUpperCase(),
         number: req.body.number,
         fname: req.body.fname,
         lname: req.body.lname,
