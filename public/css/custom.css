@@ -605,3 +605,46 @@ However, delay the fade out process for 2.5 seconds */
     color: #fff;
     background-color: darkgrey;
 }
+
+
+/* Team Page CSS*/
+.teamdropdown{
+  background-color: darkslategray;
+  width: 159px;
+  height: auto;
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
+  background: darkslategrey;
+
+}
+.dropdown{
+  background-color: darkslategray;
+}
+
+li.active >a.dropdown-toggle > a.hover{
+  background-color: darkslategrey;
+}
+
+.nav-tabs>li>a{
+  margin-right:0px;
+  border:0px;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+  background-color: darkslategrey;
+}
+.teampic{
+  width: 350px;
+  height: 350px;
+}
+
+.team-head{
+  font-family: fantasy;
+  
+
+}
+
+div > .img-circle {
+    border-radius: 50%;
+    width: 200px;
+    height:200px;
+}
