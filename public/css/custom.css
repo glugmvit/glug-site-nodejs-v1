@@ -605,3 +605,19 @@ However, delay the fade out process for 2.5 seconds */
     color: #fff;
     background-color: darkgrey;
 }
+
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../images/loading.gif') 50% 50% no-repeat;
+    opacity: .8;
+}
+div.hidden
+{
+    display: none
+}

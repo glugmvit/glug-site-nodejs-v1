@@ -30,7 +30,8 @@
 
 </head>
 <body>
-
+{{!-- <div class="loader"></div> --}}
+{{!-- <div class="hidden"> --}}
 <div class="row">
     <div class="col-md-10 col-md-offset-1"></div>
     {{#if error_msg}}
@@ -130,12 +131,21 @@
 <main>
 {{{body}}}
 </main>
+{{!-- </div> --}}
+
 
 {{!-- Custom JS here --}}
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/navbar.js"></script>
-
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".loader").fadeOut(3000);
+    setTimeout(function(){
+       $('div.hidden').removeClass('hidden');
+    },2000); 
+});
+</script>
 </body>
 </html>
