@@ -26,6 +26,7 @@ var dashboard = require('./routes/dashboard');
 var upcoming = require('./routes/upcoming');
 var activities = require('./routes/activities');
 var profile = require('./routes/profile');
+var addmem = require('./routes/addmem');
 
 // Init App
 var app = express();
@@ -86,6 +87,7 @@ app.use('/dashboard', dashboard);
 app.use('/upcoming', upcoming);
 app.use('/activities', activities);
 app.use('/profile', profile);
+app.use('/addmem', addmem);
 
 app.get('*', function(req, res){
   res.render('404',{layout:false});

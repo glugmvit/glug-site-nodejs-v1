@@ -1,23 +1,19 @@
-<br><br><br><br><br>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-2">
-      member1
+<link rel="stylesheet" type="text/css" href="css/team.css">
+<div class="container pagediv">
+  <div class="row pagediv">
+  {{#each users}}
+    <div class="col-sm-3">
+      <figure class="snip1336">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample87.jpg" alt="sample87" />
+        <figcaption>
+          <img onerror="this.src='images/no-image-icon.png'" src="http://res.cloudinary.com/dttf46owb/image/upload/v1503147377/user_photos/{{this.usn}}.jpg" class="profile" />
+          <h2>{{this.fname}}&nbsp;{{this.lname}}</h2>
+          <p>{{this.bio}}</p>
+{{!--           <a href="#" class="follow">Follow</a>
+          <a href="#" class="info">More Info</a>
+ --}}        </figcaption>
+      </figure>
     </div>
-    <div class="col-sm-2">
-      member2
-    </div>
-    <div class="col-sm-2">
-      member3
-    </div>
-    <div class="col-sm-2">
-      member4
-    </div>
-    <div class="col-sm-2">
-      member5
-    </div>
-    <div class="col-sm-2">
-      member6
-    </div>
+  {{/each}}
   </div>
 </div>

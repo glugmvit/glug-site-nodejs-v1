@@ -1,0 +1,64 @@
+<div class="container pagediv">
+	<div class="row">
+	<form method="post" action="/addmem">
+		<div class="col-md-6">
+			<h2>ADD MEMBER</h2>
+            <table class="table table-striped table-condensed">
+                  <thead>
+                  <tr>
+                      <th>Username</th>
+                      <th>First name</th>
+                      <th>Last name</th>
+                      <th>Status</th>    
+                      <th>Add as member</th> 
+                      <th>Remove as member</th>                                      
+                  </tr>
+              </thead>   
+              <tbody>
+              {{#each all}}
+              	{{#ifCond this.type "admin"}}
+              	{{else}}
+	                <tr>
+	                    <td>{{this.username}}</td>
+	                    <td>{{this.fname}}</td>
+	                    <td>{{this.lname}}</td>
+	                    {{#ifCond this.type "student"}}
+	                    <td><span class="label label-success">{{this.type}}</span>
+	                    </td> 
+	                    {{else}}
+	                    <td><span class="label label-warning">{{this.type}}</span>
+	                    </td>    
+	                    {{/ifCond}}                                   
+	                    <td>
+		                    <input class="add" name="usnadd" onclick="add()" value="{{this.usn}}" type="checkbox">
+                        </td>
+                        <td>
+		                    <center><input class="remove" name="usnrem" onclick="rem()" value="{{this.usn}}" type="checkbox"/></center>
+                        </td>
+	                </tr>    
+                {{/ifCond}}
+              {{/each}}                            
+              </tbody>
+            </table>
+            <input name="adcount" id="adcount" type="hidden">
+            <input name="rmcount" id="rmcount" type="hidden">
+            <button type="submit" id="submit" disabled="true">SUBMIT</button>
+        </div>
+	</form>
+
+	</div>
+</div>
+<script type="text/javascript">
+var acounter = 0;
+function add() {
+	var acounter = $(".add:checked").length;
+	document.getElementById('adcount').value=acounter;
+	document.getElementById('submit').disabled=false;
+}
+var rcounter = 0;
+function rem() {
+	var rcounter = $(".remove:checked").length;
+	document.getElementById('rmcount').value=rcounter;
+	document.getElementById('submit').disabled=false;
+}
+</script>

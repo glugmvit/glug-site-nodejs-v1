@@ -10,9 +10,7 @@
   <div class="row jumbotron">
    <div class="col-md-3">
    <div><br><br></div>
-     <object class="img-responsive img-circle users" data="http://res.cloudinary.com/dttf46owb/image/upload/v1503147377/user_photos/{{user.usn}}.jpg" type="image/png">
-        <img class="img-responsive users" src="images/no-image-icon.png" alt="User_Image" > 
-      </object>
+      <img class="img-responsive img-circle users" src="http://res.cloudinary.com/dttf46owb/image/upload/v1503147377/user_photos/{{user.usn}}.jpg" onerror="this.src='images/no-image-icon.png'" alt="User_Image" > 
      <div class="username">
         <h4>{{user.username}}</h4>
         <p>{{user.email}}</p>

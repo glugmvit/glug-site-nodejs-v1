@@ -10,14 +10,13 @@
 
     {{!-- Bootstrap CSS --}}
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
 
     {{!-- Font Awesome CSS --}}
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
     {{!-- Custom CSS here --}}
     <link rel="stylesheet" type="text/css" href="css/custom.css">
-    <link rel="stylesheet" type="text/css" href="css/team.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
     {{!-- Custom Fonts here --}}
@@ -30,7 +29,7 @@
     <script src="js/custom.js"></script>
 
 </head>
-<body scroll="no">
+<body>
 
 <div class="row">
     <div class="col-md-10 col-md-offset-1"></div>
@@ -85,19 +84,35 @@
                 {{else}}
                     <li><a href="/">home </a></li>
                     {{#if user}}
-                        <li><a href="/activities">Activities</a></li>
-                        <li><a href="/upcoming">Upcoming</a></li>
-                        <li class="dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">{{user.username}}&nbsp;<i class="fa fa-angle-down"></i>
-                            </a>
-                            <div class="navbar-default dropdown-menu drop" aria-labelledby="navbarDropdownMenuLink">
-                              <a class="dropdown-item" href="/dashboard"><p>Dashboard</p></a>
-                              <hr>
-                              <a class="dropdown-item" href="/profile"><p>Profile</p></a>
-                              <hr>
-                              <a class="dropdown-item" href="/logout"><p>Logout</p></a>
-                            </div>
-                        </li>
+                        {{#ifCond user.type "admin"}}
+                            <li><a href="/addmem">Add member</a></li>
+                            <li><a href="/addevent">Add event</a></li>
+                            <li class="dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">{{user.username}}&nbsp;<i class="fa fa-angle-down"></i>
+                                </a>
+                                <div class="navbar-default dropdown-menu drop" aria-labelledby="navbarDropdownMenuLink">
+                                  <a class="dropdown-item" href="/dashboard"><p>Dashboard</p></a>
+                                  <hr>
+                                  <a class="dropdown-item" href="/profile"><p>Profile</p></a>
+                                  <hr>
+                                  <a class="dropdown-item" href="/logout"><p>Logout</p></a>
+                                </div>
+                            </li>
+                        {{else}}
+                            <li><a href="/activities">Activities</a></li>
+                            <li><a href="/upcoming">Upcoming</a></li>
+                            <li class="dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">{{user.username}}&nbsp;<i class="fa fa-angle-down"></i>
+                                </a>
+                                <div class="navbar-default dropdown-menu drop" aria-labelledby="navbarDropdownMenuLink">
+                                  <a class="dropdown-item" href="/dashboard"><p>Dashboard</p></a>
+                                  <hr>
+                                  <a class="dropdown-item" href="/profile"><p>Profile</p></a>
+                                  <hr>
+                                  <a class="dropdown-item" href="/logout"><p>Logout</p></a>
+                                </div>
+                            </li>
+                        {{/ifCond}}
                     {{else}}
                         <li><a href="/register">register</a></li>
                         <li><a href="/login">Login</a></li>
