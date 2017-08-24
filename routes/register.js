@@ -34,8 +34,8 @@ router.post('/', function(req, res){
     });
 
     // check if the username, usn or email is used before or NOT
-    User.checkExistingUser(req.body.username, req.body.usn, req.body.email,(err,data) => {
-        if(data == null){
+    User.checkExistingUser(newUser.username, newUser.usn, newUser.email,(err,data) => {
+        if(data == null){   
 
             // if NOT used before, then add new user.
             User.createUser(newUser, function(err, user){

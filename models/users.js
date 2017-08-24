@@ -20,7 +20,8 @@ var UserSchema = mongoose.Schema({
 		type: String
 	},
 	usn: {
-		type: String
+		type: String,
+		uppercase: true
 	},
 	number: {
 		type: Number
