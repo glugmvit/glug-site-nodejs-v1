@@ -18,7 +18,8 @@ router.post('/',function(req,res){
         bio:req.body.bio
     };
     User.findOneAndUpdate({usn:req.session.user.usn},updatedUser,{ upsert: true, new: true },function(err,doc){
-    	if(err)
+    	console.log(doc);
+        if(err)
     		console.log(err);
     	else
     		req.flash('success_msg', 'Updated content!');
