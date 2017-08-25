@@ -44,6 +44,7 @@ h1, h2, h3, h4, h5, h6
   padding-top:30px !important;
   text-align: center;
   border: 0;
+  background: rgba(0,0,0,0.8);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -52,6 +53,7 @@ h1, h2, h3, h4, h5, h6
 }
 .main-header
 {
+  image-rendering: pixelated;
   background: url(../images/banner.jpg) no-repeat;
   background-size: cover;
   min-height: 660px;
@@ -470,18 +472,18 @@ a, a:hover
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #snackbar {
-    visibility: hidden; /* Hidden by default. Visible on click */
-    min-width: 250px; /* Set a default minimum width */
-    margin-left: -125px; /* Divide value of min-width by 2 */
-    background-color: #333; /* Black background color */
-    color: #fff; /* White text color */
-    text-align: center; /* Centered text */
-    border-radius: 2px; /* Rounded borders */
-    padding: 16px; /* Padding */
-    position: fixed; /* Sit on top of the screen */
-    z-index: 1; /* Add a z-index if needed */
-    left: 50%; /* Center the snackbar */
-    bottom: 30px; /* 30px from the bottom */
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333; 
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
 }
 
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
@@ -606,7 +608,7 @@ However, delay the fade out process for 2.5 seconds */
     background-color: darkgrey;
 }
 
-
+/*------------- Loader -------------*/
 .loader {
     position: fixed;
     left: 0px;
@@ -621,3 +623,31 @@ div.hidden
 {
     display: none
 }
+/*------------- Loader -------------*/
+
+/*------------ Admin Card -------------*/
+.custom-card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.custom-card hr {
+  margin-top:0;
+  margin-bottom:0px;
+}
+.img-responsive {
+  height: 200px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto
+}
+/* On mouse-over, add a deeper shadow */
+.custom-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.custom-card-container {
+    padding: 2px;
+}
+/*------------ Admin card-------------*/

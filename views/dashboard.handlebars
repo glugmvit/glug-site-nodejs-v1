@@ -1,10 +1,32 @@
 {{#ifCond user.type "admin"}}
-
+{{!-- Admin dashboard --}}
   <div class="container pagediv">
-    <h1>Admin dashboard</h1>
+    <div class="row pagediv center">
+      <div class="col-sm-3 custom-card">
+        <a href="/addmem">
+        <img class="img-responsive" src="images/add.png" alt="Avatar">
+        <hr>
+        <div class="custom-card-container">
+          <h4><b>Member Management</b></h4> 
+          <p>Add or remove a user as member</p> 
+        </div>
+        </a>
+      </div>
+      <div class="col-sm-3 col-md-offset-1 custom-card">
+        <a href="/addevent">
+        <img class="img-responsive" src="images/addevent.png" alt="Avatar">
+        <hr>
+        <div class="custom-card-container">
+          <h4><b>Event Management</b></h4> 
+          <p>Announce an event</p> 
+        </div>
+        </a>
+      </div>
+    </div>
   </div>
-
+{{!--  --}}
 {{else}}
+{{!-- User Dashboard --}}
 <br>
 <div class="container pagediv">
   <div class="row jumbotron">
@@ -52,5 +74,5 @@
   </div>
   </div>
 </div>
-
+{{!--  --}}
 {{/ifCond}}
