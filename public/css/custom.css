@@ -716,3 +716,10 @@ margin-top:70px;
     padding: 2px;
 }
 /*------------ Admin card-------------*/
+/*------------ css for user dashboard---------*/
+ footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+

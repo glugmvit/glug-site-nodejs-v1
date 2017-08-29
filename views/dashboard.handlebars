@@ -26,53 +26,130 @@
   </div>
 {{!--  --}}
 {{else}}
+<!--dashborad modified on 30/08/2017-->
+<!-- by apoorv tikalkar-->
 {{!-- User Dashboard --}}
 <br>
-<div class="container pagediv">
-  <div class="row jumbotron">
-   <div class="col-md-3">
-   <div><br><br></div>
-      <img class="img-responsive img-circle users" src="http://res.cloudinary.com/dttf46owb/image/upload/v1503147377/user_photos/{{user.usn}}.jpg" onerror="this.src='images/no-image-icon.png'" alt="User_Image" > 
-     <div class="username">
-        <h4>{{user.username}}</h4>
-        <p>{{user.email}}</p>
-    </div>
-     <h4 class="text-center">{{user.bio}}</h4>
-     <a style="color:blue" href="/profile">Profile Settings</a>
-   </div>
-   <div class="col-md-1"></div>
-   <div class="col-md-8">
-      <div><br><br></div>
-      <div id="exTab1">
-        <ul  class="nav nav-tabs pills-tab">
-              <li class="active" >
-                <a href="#1a" data-toggle="tab">Registered</a>
-              </li>
-              <li><a href="#2a" data-toggle="tab">Participated</a>
-              </li>
-              <li><a href="#3a" data-toggle="tab">Collaborate</a>
-              </li>
-        </ul>
+<br>
+<br>
+<br>  
+<div class="container text-center">    
+  <div class="row">
+    <div class="col-sm-3 well">
+      <div class="well">
+        <p><a href="#">My Profile</a></p>
+        <img src="https://s3.amazonaws.com/intellect-wp-prod/wp-content/uploads/sites/6/2017/03/17160602/profle-management.svg" class="img-circle" height="65" width="65" alt="Avatar">
+      </div>
+     
+     <p>About the member</p>
+ <p>About the member</p>
+ <p>About the member</p>
 
-            <div class="tab-content">
-              <div class="tab-pane active" id="1a">
-                <h3>some other object. For example, the designer of an online newsletter may have a template that they fill with dummy text so they can get an idea of how to layout a page looks. One of the most common filler texts is lorem ipsum.</h3>
-              </div>
-              <div class="tab-pane" id="2a">
-                <h3>Alternatively referred to as dummy text or filler text, placeholder text is text that is used to preview fonts, spoof an e-mail spam filter, or reserve a specific place on a web page or other document for images, text, or some other object. For example, the designer of an online newsletter may have a template that they fill with dummy text so they can get an idea of how to .</h3>
-              </div>
-              <div class="tab-pane" id="3a">
-                <h3>Want to help out in building something GREAT!!</h3>
-                <img src="/images/bh.png" style="width:50%;height:40%;">
-                <p>Contribute to the community by helping in Web and Android development.</p>
-                <a href="https://github.com/GlugMVIT" target="_blank" class="btn btn-primary">Visit Page</a>
-              </div>
+<p>Qualifications</p>
+
+      <p><a href="#">Link</a></p>
+      <div class="well">
+        <p><a href="#">Various Feilds</a></p>
+        <p>
+          <span class="label label-default"><a href="#">ML</a></span>
+          <span class="label label-primary"><a href="#">Block Chain</a></span>
+          <span class="label label-success"><a href="#">Android</a></span>
+          <span class="label label-info"><a href="#">Web</a></span>
+          <span class="label label-warning"><a href="#">AI</a></span>
+          
+        </p>
+      </div> 
+    </div>
+    <div class="col-sm-7">
+    
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default text-left">
+            <div class="panel-body">
+              <p contenteditable="true">Feedback: for the previous event </p>
+              <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-thumbs-up"></span> Like
+              </button>     
             </div>
-            </div>
-      <hr></hr>
-   </div>
-  </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p><strong>Registered</strong></p>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p><strong>Participated</strong></p>
+           </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p><strong>Collaboated</strong></p>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+    <div class="col-sm-2 well">
+      <div class="thumbnail">
+        <p>Upcoming Events:</p>
+        <img src="https://static.pexels.com/photos/7613/pexels-photo.jpg" alt="Paris" width="400" height="300">
+        <p><strong>Machine Learning</strong></p>
+        <p>Fri. 27 November 2015</p>
+        <button class="btn btn-primary">Info</button>
+      </div>      
+      <div class="well">
+        <p>Related info</p>
+      </div>
+      <div class="well">
+        <p>Related info</p>
+      </div>
+    </div>
   </div>
 </div>
+
+<!-- Footer -->
+ <footer class="" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7 footer-copyright">
+                © GLUG MVIT - All rights reserved
+            </div>
+            <div class="col-sm-5 footer-social">
+                <div class="pull-right hidden-xs hidden-sm">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
 {{!--  --}}
 {{/ifCond}}
