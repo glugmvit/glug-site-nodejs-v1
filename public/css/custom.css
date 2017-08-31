@@ -333,7 +333,7 @@ h3.txt-tl {
   color: #000 !important;
   font-weight: 600;
 }
-.btn-send
+.btn-send 
 {
   border-radius: 0px;
   color: #000;
@@ -341,7 +341,7 @@ h3.txt-tl {
 }
 a, a:hover
 {
-  color: #FFD34E;
+  color: #000;
 }
 .cont-title
 {
