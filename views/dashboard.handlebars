@@ -69,50 +69,101 @@
         </div>
       </div>
       
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p><strong>Registered</strong></p>
-          </div>
+      <ul class="nav nav-pills">
+        <li class="active"><a data-toggle="pill" href="#home">ALL EVENTS</a></li>
+        <li><a data-toggle="pill" href="#menu1">UPCOMING</a></li>
+        <li><a data-toggle="pill" href="#menu2">COLLABORATE</a></li>
+        <li><a data-toggle="pill" href="#menu3">PREVIOUS</a></li>
+      </ul>
+      
+      <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+        <hr>
+          {{#each eventlist}}
+          <ul class="event-list">
+            <li>
+              <time datetime="{{this.date}}">
+                <span class="day">
+                <script type="text/javascript">
+                  document.write("{{this.date}}".split("-")[0]);
+                </script></span>
+                <span class="month">
+                  <script type="text/javascript">
+                    var d = "{{this.date}}".split("-");
+                    var dateHash = {1:'Jan',2:'Feb',3:'Mar',4:'Apr',5:'May',6:'Jun',7:'Jul',8:'Aug',9:'Sep',10:'Oct',11:'Nov',12:'Dec'};
+                    document.write(dateHash[parseInt(d[1])]);
+                  </script>
+                </span>
+                <span class="year">
+                  <script type="text/javascript">
+                    document.write("{{this.date}}".split("-")[2]);
+                  </script>
+                </span>
+                <span>{{this.date}}</span>
+              </time>
+              <img src="{{this.posterurl}}" onerror="this.src = 'images/logo-sq fixed.png'"/>
+              <div class="info">
+                <p class="event-title">{{this.name}}</p>
+                <p class="event-desc">{{this.description}}</p>
+                <ul>
+                  <li style="width:33%;">Register <span class="fa fa-user-plus"></span></li>
+                  <li style="width:34%;">{{this.regcount}} <span class="fa fa-user"></span></li>
+                  {{!-- <li style="width:33%;">103 <span class="fa fa-envelope"></span></li> --}}
+                </ul>
+              </div>
+            </li>
+          </ul>
+          {{/each}}
         </div>
-        <div class="col-sm-9">
-          <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-          </div>
+        <div id="menu1" class="tab-pane fade">
+          <h3>Menu 1</h3>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+        <hr>
+          <ul class="event-list">
+            <li>
+              <img src = 'images/logo-sq fixed.png'/>
+              <div class="info">
+                <p class="event-title">Website</p>
+                <p class="event-desc">Official website development for GLUG</p>
+                <ul>
+                  <li style="width:33%;">GitHub <span class="fa fa-github"></span></li>
+                  <li style="width:34%;">11 <span class="fa fa-user"></span></li>
+                  {{!-- <li style="width:33%;">103 <span class="fa fa-envelope"></span></li> --}}
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="event-list">
+            <li>
+              <img src = 'images/logo-sq fixed.png'/>
+              <div class="info">
+                <p class="event-title">App</p>
+                <p class="event-desc">Official app development for GLUG</p>
+                <ul>
+                  <li style="width:33%;">GitHub <span class="fa fa-github"></span></li>
+                  <li style="width:34%;">11 <span class="fa fa-user"></span></li>
+                  {{!-- <li style="width:33%;">103 <span class="fa fa-envelope"></span></li> --}}
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="menu3" class="tab-pane fade">
+          <h3>Menu 3</h3>
+          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p><strong>Participated</strong></p>
-           </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p><strong>Collaboated</strong></p>
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-          </div>
-        </div>
-      </div>
+
      
     </div>
     <div class="col-sm-2 well">
       <div class="thumbnail">
-        <p>Upcoming Events:</p>
-        <img src="https://static.pexels.com/photos/7613/pexels-photo.jpg" alt="Paris" width="400" height="300">
-        <p><strong>Machine Learning</strong></p>
-        <p>Fri. 27 November 2015</p>
+        <p>Getting Started with OpenSource:</p>
+        <img src="https://www.python.org/static/opengraph-icon-200x200.png" alt="Paris" width="400" height="300">
+        <p><strong>Python</strong></p>
+        <p>Online material</p>
         <button class="btn btn-primary">Info</button>
       </div>      
       <div class="well">
@@ -147,3 +198,4 @@
 
 {{!--  --}}
 {{/ifCond}}
+
